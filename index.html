@@ -5,6 +5,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="./assets/style.css" />
       <title>Document</title>
    </head>
@@ -123,6 +124,24 @@
                   </div>
                </div>
             </nav>
+         <div class="rooms-modal">
+            <span class="close" onclick="Close()">&times;</span>
+               <div id="myModal" class="modal">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>DATA1</th>
+                        <th>DATA2</th>
+                        <th>DATA3</th>
+                        <th>DATA4</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                     
+                    </tbody>
+                  </table>
+             </div>
+            </div>
          </header>
          <div class="drawer-menu">
             <div class="just-padding">
@@ -148,17 +167,7 @@
                </div>
                <a href="#">Error 404 Page</a>
                <a href="#">Buy this theme!</a>
-               <a href=""
-                  >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Assumenda nobis laborum beatae quia tenetur distinctio
-                  similique error illo molestias esse neque, recusandae fugiat
-                  nostrum voluptatum autem nesciunt earum. Distinctio, sequi?
-                  Lorem ipsum dolor sit aorem ipsum dolor sit amet consectetur
-                  amet consectetur adipisicing elit. Deserunt architecto amet
-                  iure quo quam quaerat adipisci. Totam libero quis ratione
-                  voluptates nulla magni maxime aspernatur minima, aperiam iure
-                  non reprehenderit.</a
-               >
+              <p>This is a sidebar that can be used to put an extra menu with details that don't need to be on the main menu. It also serves as the mobile menu area!</p>
             </div>
          </div>
 
@@ -199,24 +208,24 @@
             </ul>
          </div>
 
-         <div class="dark-center-box">
-            <div class="date-input">
-               <label for="arrival-date">check in date</label>
-               <input
-                  type="date"
-                  value="select arrival date"
-                  id="arrival-date"
-               />
+         <div class="dark-center-box" >
+            <div class="inputs">
+              <div class="date-input">
+                <label for="arrival-date">check in date</label>
+                <input type="text" placeholder="select arrival date" onfocus="(this.type='date')" onblur="(this.type='text')" id="arrival-date">
+              </div>
+              <div class="date-input">
+                <label for="departure-date">check out date</label>
+                <input type="text" placeholder="select departure date" onfocus="(this.type='date')" onblur="(this.type='text')"  id="departure-date">
+              </div>
             </div>
-            <div class="date-input">
-               <label for="departure-date">check out date</label>
-               <input
-                  type="date"
-                  placeholder="select departure date"
-                  id="departure-date"
-               />
+      
+         <div class="button-req">
+            <div class="eff-req"></div>
+               <a href="#" class="text-req">REQUEST A QUOTE</a>
             </div>
          </div>
+      </div>
          <div class="mainTxt" >
             <h1 class="welcomeTxt">WELCOME</h1>
             <h2 class="hotelTxt">XENIA HOTEL</h2>
@@ -229,30 +238,41 @@
             <p>We are proud to say that since our opening in ’98 we have been serving our visitors in the best possible way. Above you there let to brought over seas cattle he great give, day creepeth you’ll their sea called don’t their given dry, make said so lesser divided, firmament fill fowl night second cattle over sixth evening god moveth day stars good evening years you’re beginning have you’ll fowl. Rule life spirit, whales him.</p>
            </div>
           </div>
+          <div class="introduce">
+            <img class="RichardPhoto" src="./assets/pic/avatar-1.jpg" alt="">
+            <h3>Yours truly,</h3>
+            <h5>Richard</h5>
+          </div>
          <div class="card-boxes">
             <div class="card">
                <div class="image">
                   <img src="./assets/pic/spa-banner.jpg" alt="massage" />
+                  <div class="card-hover">
+                     <div class="card-hover-text">
+                        <p>XENIA hosts an amazing place to relax; we call it paradise you may call it XENIA Spa. We would love to introduce you to this amazing relaxing and refreshing experience.</p>
+                     </div>
+                  </div>
                </div>
                <div class="card-logo">
                   <img src="./assets/pic/logo_spa.webp" alt="spalogo" />
                </div>
                <h4>spa salon</h4>
-               <!-- <div class="card-hover-text">
-                  <p>XENIA hosts an amazing place to relax; we call it paradise you may call it XENIA Spa. We would love to introduce you to this amazing relaxing and refreshing experience.</p>
-               </div> -->
+               
             </div>
             <div class="card">
                <div class="image">
                   <img src="./assets/pic/gym-banner.jpg" alt="gym" />
+                  <div class="card-hover">
+                     <div class="card-hover-text">
+                        <p>Keep up with your fitness routine whilst you’re away with our free in-house gym. Packed with cardio and resistance equipment and free weights, you can unwind after a busy day in the capital at the 5-star XENIA Hotel.</p>
+                     </div>
+                  </div>
                </div>
                <div class="card-logo">
                   <img src="./assets/pic/logo_gym.webp" alt="gymlogo" />
                </div>
                <h4>gym</h4>
-               <!-- <div class="card-hover-text">
-                  <p>Keep up with your fitness routine whilst you’re away with our free in-house gym. Packed with cardio and resistance equipment and free weights, you can unwind after a busy day in the capital at the 5-star XENIA Hotel.</p>
-               </div> -->
+               
             </div>
             <div class="card">
                <div class="image">
@@ -260,6 +280,11 @@
                      src="./assets/pic/restaurant-banner.jpg"
                      alt="restaurant"
                   />
+                  <div class="card-hover">
+                     <div class="card-hover-text">
+                        <p>The XENIA Hotel Restaurant has been renovated and is ready to welcome you! For&nbsp;breakfast&nbsp;or&nbsp;lunch, the elegant environment of the XENIA Roof Garden Restaurant creates a tranquil atmosphere, while&nbsp;dinner&nbsp;is perfect when the city lights come on.</p>
+                     </div>
+                  </div>
                </div>
                <div class="card-logo">
                   <img
@@ -268,13 +293,46 @@
                   />
                </div>
                <h4>restaurant</h4>
-               <!-- <div class="card-hover-text">
-                  <p>The XENIA Hotel Restaurant has been renovated and is ready to welcome you! For&nbsp;breakfast&nbsp;or&nbsp;lunch, the elegant environment of the XENIA Roof Garden Restaurant creates a tranquil atmosphere, while&nbsp;dinner&nbsp;is perfect when the city lights come on.</p>
-               </div> -->
+               
             </div>
          </div>
+         <div class="Bg-bed">
+            <h2>GET 15% OFF TODAY</h2>
+            <img class="Ornament" src="./assets/pic/Ornament.png" alt="Ornament">
+            <p>Book your stay online and secure your summer vacations on time with an amazing discount </p>
+            <div class="buttonShowRooms">
+              <div class="hiddenBtn"></div>
+              <a href="#" class="textShowBtn"> VIEW OUR ROOMS</a>
+            </div>
+          </div>
+        
+          </div>
+          <footer>
+             <div>
+                <img src="./assets/pic/logo.webp" alt="logo">
+             </div>
+             <div class="footer-info">
+                <div class="footer-items"><i class="icon fa fa-phone"></i>(+30) 210 1234567</div>
+                <div class="footer-items"><i class="icon fa fa-envelope"></i><a class="icon2" href="info@plethora-xenia.com"> info@plethora-xenia.com</a></div>
+                <div class="footer-items"><i class="icon icon3 fa fa-location-arrow"></i>79 Folsom, San Francisco, 566</div>
+             </div>
+             <div class="spacing"></div>
+          </footer>
+          <div class="under-footer">
+             <p>COPYRIGHT © 2020 ALL RIGHTS RESERVED XENIA HOTEL</p>
+             <img src="./assets/pic/award.webp" alt="logo">
+             <ul id="menu-footer-bar-menu" class="footerbar_menu"><li id="menu-item-491" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-19 current_page_item menu-item-491 active"><a title="Home" href="https://hotel-xenia.plethorathemes.com/">Home</a></li>
+               <li class="under-footer-li"><a title="Rooms" href="#">Rooms</a></li>
+               <li class="under-footer-li"><a title="Package offer" href="#">Package offer</a></li>
+               <li class="under-footer-li"><a title="Spa Salon" href="#">Spa Salon</a></li>
+               <li class="under-footer-li"><a title="Hotel Gym" href="#">Hotel Gym</a></li>
+               <li class="under-footer-li"><a title="Contact" href="#">Contact</a></li>
+               </ul>
+          </div>
       </div>
       <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
       <script src="./assets/main.js"></script>
    </body>
 </html>
+
+

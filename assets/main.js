@@ -52,9 +52,9 @@ $(document).ready(function () {
     });
   });
 
-  $(document).ready(function () {
-    $(".hamburger").click(function () {
-      $(this).toggleClass("is-active");
+
+    $(".three").click(function () {
+      $(".hamburger").toggleClass("is-active");
     });
 
     $(".three").click(function () {
@@ -69,7 +69,7 @@ $(document).ready(function () {
       $(".three").addClass("active");
       $(".drawer-menu").animate(
         {
-          width: "20vw",
+          width: "25vw",
           height: "100vh",
         },
         "slow"
@@ -77,7 +77,7 @@ $(document).ready(function () {
 
       $(".three").animate(
         {
-          marginRight: "10vw",
+          marginRight: "15vw",
         },
         "slow"
       );
@@ -85,8 +85,12 @@ $(document).ready(function () {
       $(".first-logo").css({
         display: "none",
       });
+
+      // $('body').css({
+      //   paddingRight :'25vw'
+      // })
     }
-  });
+ 
   function closeMenu() {
     $(".three").removeClass("active");
     $(".drawer-menu").animate(
@@ -105,7 +109,19 @@ $(document).ready(function () {
       },
       "slow"
     );
+    // $('body').css({
+    //   paddingRight :'-25vw'
+    // })
   }
+
+  $.ajax({
+    method: "GET",
+    URL: 'assets/rooms.json',
+    success: ()=>{
+       
+    }
+  })
+
   $(".button").hover(
     function () {
       $(".text").css("color", "#c5bc58");
@@ -313,4 +329,33 @@ $(document).ready(function () {
       transition: "all ease .5s",
     });
   });
+
+  $(".button-req").hover(
+    function () {
+      $(".text-req").css("color", "white");
+      $(".eff-req").css({
+        bottom: "0",
+      });
+    },
+    function () {
+      $(".text-req").css("color", "#6fb586");
+      $(".eff-req").css({
+        bottom: "-50px",
+      });
+    }
+  );
+  $(".buttonShowRooms").hover(
+    function () {
+      $(".textShowBtn").css("color", "white");
+      $(".hiddenBtn").css({
+        bottom: "0",
+      });
+    },
+    function () {
+      $(".textShowBtn").css("color", "black");
+      $(".hiddenBtn").css({
+        bottom: "-80px",
+      });
+    }
+  );
 });

@@ -39,7 +39,7 @@ body {
       cursor: pointer;
       position: relative;
       padding: 10px 10px 0 15px;
-      margin-left: 30%;
+      margin-left: 30vw;
       width: 300px;
       height: 40px;
       text-align: center;
@@ -67,6 +67,7 @@ body {
          z-index: 1;
       }
    }
+   //hamburger lines
    .three {
       margin-left: 2rem;
       width: 23.8%;
@@ -132,6 +133,9 @@ body {
          text-decoration: none;
          font-size: 16px;
       }
+   }
+   p{
+      color: $light;
    }
    .border-side {
       display: flex;
@@ -361,7 +365,10 @@ hr {
    }
 }
 .mainTxt {
+   color: $smoky;
    position: relative;
+   display: flex;
+   flex-direction: column;
    .welcomeTxt {
       font-family: none;
       font-weight: 100;
@@ -397,7 +404,32 @@ hr {
       top: 50px;
    }
 }
-
+.text{
+   color: $smoky;
+}
+.introduce {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   margin-top: 15px;
+   h3 {
+      font-weight: 100;
+      font-size: large;
+   }
+   h5 {
+      font-weight: 100;
+      font-size: large;
+      margin-top: 2px;
+   }
+}
+.RichardPhoto {
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+   margin-left: auto;
+   margin-right: auto;
+}
 .text h2 {
    text-align: center;
    font-size: 25px;
@@ -417,31 +449,70 @@ hr {
    font-weight: 200;
    line-height: 1.5;
 }
-
 .dark-center-box {
    position: relative;
    display: flex;
+   flex-direction: column;
    align-items: center;
    justify-content: center;
    width: 90vw;
    height: 40vh;
-   bottom: 1rem;
+   bottom: 5rem;
    left: 4.5rem;
    background-color: $Primary_dark;
+   .inputs {
+      display: flex;
+      flex-direction: row;
+   }
+
    .date-input {
       display: flex;
       flex-direction: column;
-      font-size: $font_medium;
+      font-size: 16px;
       color: $light;
       align-items: center;
       text-transform: uppercase;
       input {
          background-color: $primary_light;
          border: 1px solid $primary_light;
-         padding: 40px 70px;
+         padding: 40px 90px;
          margin: 10px;
-         font-size: $font_medium;
+         font-size: 16px;
       }
+   }
+}
+.button-req {
+   align-items: flex-end;
+   align-items: center;
+   cursor: pointer;
+   position: relative;
+   padding: 10px 10px 0 15px;
+   width: 150px;
+   height: 40px;
+   text-align: center;
+   box-sizing: border-box;
+   overflow: hidden;
+   color: $light;
+   background-color: transparent;
+   border: 1px solid $succese_light;
+   a {
+      white-space: nowrap;
+      text-decoration: none;
+      transition: all 0.5s ease;
+      z-index: 1;
+      color: $succese_light;
+      text-decoration: none;
+      position: relative;
+   }
+   .eff-req {
+      width: 150px;
+      height: 40px;
+      bottom: -50px;
+      left: 0;
+      background: $succese_light;
+      position: absolute;
+      transition: all 0.5s ease;
+      z-index: 1;
    }
 }
 
@@ -452,7 +523,9 @@ hr {
    .image img {
       width: 350px;
    }
-
+   .image {
+      position: relative;
+   }
    .card {
       padding: 10px;
       position: relative;
@@ -466,10 +539,189 @@ hr {
          padding: 15px 30px;
       }
    }
+   .card-hover {
+      position: absolute;
+      bottom: 5px;
+      width: 350px;
+      height: 0;
+      background-color: rgba($color: $dark, $alpha: 0.5);
+      transition: 0.2s height;
+   }
+   .image:hover {
+      .card-hover {
+         height: 525px;
+         .card-hover-text {
+            visibility: visible;
+            height: 200px;
+         }
+      }
+   }
+   .card:hover {
+      h4 {
+         display: none;
+      }
+   }
    .card-logo img {
       position: absolute;
       top: 0;
       width: 120px;
       padding: 40px;
    }
+   .card-hover-text {
+      position: absolute;
+      bottom: 0;
+      font-size: $font_large;
+      padding: 20px;
+      color: rgba($color: $light, $alpha: 0.7);
+      visibility: hidden;
+      //  opacity: 0;
+      height: 0;
+      transition: visibility , height 0.5s;
+   }
 }
+// opacity 0.5s linear
+.Bg-bed {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-image: url(./pic/home-banner-1.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   height: 60vh;
+   font-size: 50px;
+   font-weight: 700;
+
+   h2 {
+      line-height: 0.9;
+      color: $smoky;
+      opacity: 1;
+      font-family: "Playfair Display", serif;
+   }
+   p {
+      font-size: 17px;
+      font-weight: 200;
+      line-height: 1.5;
+      font-family: "Source Sans Pro", sans-serif;
+   }
+}
+.buttonShowRooms {
+   cursor: pointer;
+   position: relative;
+   padding-bottom: 10px;
+   width: 180px;
+   box-sizing: border-box;
+   overflow: hidden;
+   border: 1px solid $smoky;
+   background-color: transparent;
+   a {
+      font-size: 16px;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.5s ease;
+      z-index: 1;
+      color: $dark;
+      margin-left: 15%;
+      position: relative;
+   }
+   .hiddenBtn {
+      width: 180px;
+      height: 80px;
+      bottom: -80px;
+      left: 0px;
+      background: $dark;
+      position: absolute;
+      transition: all 0.5s ease;
+      z-index: 1;
+   }
+}
+.Ornament {
+   width: 10%;
+   height: 5vh;
+}
+
+footer{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: $sample;
+   img{
+      margin-top: 30px;
+      width: 6rem;
+   }
+   .footer-info{
+      display: flex;
+      .footer-items{
+         color: rgba($color: $light, $alpha: .7);
+         font-size: $font-medium;
+         margin: 20px;
+         .icon{
+            border: solid $smoky .5px;
+            border-radius: 50%;
+            padding:14px 15px;
+            margin-right: 15px; 
+         }
+         .icon2{
+            text-decoration: none;
+            color: rgba($color: $light, $alpha: .7);
+         }
+         .icon2:hover{
+            color: $succese_light;
+         }
+         .icon3:hover{
+            background-color: $succese_light;
+            opacity: 1;
+         }
+      }
+      
+   }
+   .spacing{
+      height: 20px;
+      border: 1px solid $smoky;
+      border-radius: 20%;
+      background-color: $smoky;
+      margin-bottom: 60px;
+   }
+}
+.under-footer{
+   display: flex;
+   background-color: $Primary_dark;
+   justify-content: space-between;
+   align-items: center;
+   p{
+      color: $smoky;
+      margin-left: 10px;
+   }
+   img{
+      margin: 10px 0;
+      width: 130px;
+      margin-left: 90px;
+   }
+   ul{
+      display: flex;
+      list-style: none;
+      margin-right: 10px;
+      li a{
+         text-decoration: none;
+         color: $smoky;
+         margin: 4px;
+      }
+   }
+}
+.rooms-modal{
+   display: flex;
+}
+.close-modal {
+   color: #aaa;
+   font-size: larger;
+   position: absolute;
+   right: -45px;
+   top: 5px;
+   width: 70px;
+   text-decoration: none;
+   &:hover {
+     color: black;
+     cursor: pointer;
+   }
+ }

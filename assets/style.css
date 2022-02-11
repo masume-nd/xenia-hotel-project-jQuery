@@ -52,7 +52,7 @@ body {
   cursor: pointer;
   position: relative;
   padding: 10px 10px 0 15px;
-  margin-left: 30%;
+  margin-left: 30vw;
   width: 300px;
   height: 40px;
   text-align: center;
@@ -167,6 +167,10 @@ body {
   color: #f4f4f4;
   text-decoration: none;
   font-size: 16px;
+}
+
+.drawer-menu p {
+  color: #f4f4f4;
 }
 
 .drawer-menu .border-side {
@@ -478,7 +482,15 @@ hr {
 }
 
 .mainTxt {
+  color: #323232;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .mainTxt .welcomeTxt {
@@ -518,6 +530,44 @@ hr {
   top: 50px;
 }
 
+.text {
+  color: #323232;
+}
+
+.introduce {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.introduce h3 {
+  font-weight: 100;
+  font-size: large;
+}
+
+.introduce h5 {
+  font-weight: 100;
+  font-size: large;
+  margin-top: 2px;
+}
+
+.RichardPhoto {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .text h2 {
   text-align: center;
   font-size: 25px;
@@ -544,6 +594,10 @@ hr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -552,9 +606,19 @@ hr {
           justify-content: center;
   width: 90vw;
   height: 40vh;
-  bottom: 1rem;
+  bottom: 5rem;
   left: 4.5rem;
   background-color: #171720;
+}
+
+.dark-center-box .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .dark-center-box .date-input {
@@ -576,9 +640,53 @@ hr {
 .dark-center-box .date-input input {
   background-color: #1F1F2C;
   border: 1px solid #1F1F2C;
-  padding: 40px 70px;
+  padding: 40px 90px;
   margin: 10px;
   font-size: 16px;
+}
+
+.button-req {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 10px 0 15px;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  color: #f4f4f4;
+  background-color: transparent;
+  border: 1px solid #6fb586;
+}
+
+.button-req a {
+  white-space: nowrap;
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 1;
+  color: #6fb586;
+  text-decoration: none;
+  position: relative;
+}
+
+.button-req .eff-req {
+  width: 150px;
+  height: 40px;
+  bottom: -50px;
+  left: 0;
+  background: #6fb586;
+  position: absolute;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 1;
 }
 
 .card-boxes {
@@ -592,6 +700,10 @@ hr {
 
 .card-boxes .image img {
   width: 350px;
+}
+
+.card-boxes .image {
+  position: relative;
 }
 
 .card-boxes .card {
@@ -609,10 +721,242 @@ hr {
   padding: 15px 30px;
 }
 
+.card-boxes .card-hover {
+  position: absolute;
+  bottom: 5px;
+  width: 350px;
+  height: 0;
+  background-color: rgba(17, 17, 17, 0.5);
+  -webkit-transition: 0.2s height;
+  transition: 0.2s height;
+}
+
+.card-boxes .image:hover .card-hover {
+  height: 525px;
+}
+
+.card-boxes .image:hover .card-hover .card-hover-text {
+  visibility: visible;
+  height: 200px;
+}
+
+.card-boxes .card:hover h4 {
+  display: none;
+}
+
 .card-boxes .card-logo img {
   position: absolute;
   top: 0;
   width: 120px;
   padding: 40px;
+}
+
+.card-boxes .card-hover-text {
+  position: absolute;
+  bottom: 0;
+  font-size: 18px;
+  padding: 20px;
+  color: rgba(244, 244, 244, 0.7);
+  visibility: hidden;
+  height: 0;
+  -webkit-transition: visibility , height 0.5s;
+  transition: visibility , height 0.5s;
+}
+
+.Bg-bed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(./pic/home-banner-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.Bg-bed h2 {
+  line-height: 0.9;
+  color: #323232;
+  opacity: 1;
+  font-family: "Playfair Display", serif;
+}
+
+.Bg-bed p {
+  font-size: 17px;
+  font-weight: 200;
+  line-height: 1.5;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.buttonShowRooms {
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 10px;
+  width: 180px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid #323232;
+  background-color: transparent;
+}
+
+.buttonShowRooms a {
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 1;
+  color: #111;
+  margin-left: 15%;
+  position: relative;
+}
+
+.buttonShowRooms .hiddenBtn {
+  width: 180px;
+  height: 80px;
+  bottom: -80px;
+  left: 0px;
+  background: #111;
+  position: absolute;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.Ornament {
+  width: 10%;
+  height: 5vh;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #15151e;
+}
+
+footer img {
+  margin-top: 30px;
+  width: 6rem;
+}
+
+footer .footer-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer-info .footer-items {
+  color: rgba(244, 244, 244, 0.7);
+  font-size: 16px;
+  margin: 20px;
+}
+
+footer .footer-info .footer-items .icon {
+  border: solid #323232 0.5px;
+  border-radius: 50%;
+  padding: 14px 15px;
+  margin-right: 15px;
+}
+
+footer .footer-info .footer-items .icon2 {
+  text-decoration: none;
+  color: rgba(244, 244, 244, 0.7);
+}
+
+footer .footer-info .footer-items .icon2:hover {
+  color: #6fb586;
+}
+
+footer .footer-info .footer-items .icon3:hover {
+  background-color: #6fb586;
+  opacity: 1;
+}
+
+footer .spacing {
+  height: 20px;
+  border: 1px solid #323232;
+  border-radius: 20%;
+  background-color: #323232;
+  margin-bottom: 60px;
+}
+
+.under-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #171720;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.under-footer p {
+  color: #323232;
+  margin-left: 10px;
+}
+
+.under-footer img {
+  margin: 10px 0;
+  width: 130px;
+  margin-left: 90px;
+}
+
+.under-footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin-right: 10px;
+}
+
+.under-footer ul li a {
+  text-decoration: none;
+  color: #323232;
+  margin: 4px;
+}
+
+.rooms-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.close-modal {
+  color: #aaa;
+  font-size: larger;
+  position: absolute;
+  right: -45px;
+  top: 5px;
+  width: 70px;
+  text-decoration: none;
+}
+
+.close-modal:hover {
+  color: black;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

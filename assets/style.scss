@@ -134,7 +134,7 @@ body {
          font-size: 16px;
       }
    }
-   p{
+   p {
       color: $light;
    }
    .border-side {
@@ -301,7 +301,7 @@ hr {
    overflow: hidden;
    margin: 0;
    .slider-txt {
-      margin-top: 300px;
+      margin-top: 610px;
    }
    .t1,
    .t2 {
@@ -342,7 +342,7 @@ hr {
       top: 40%;
       z-index: 0;
       display: block;
-      padding: 4% 3%;
+      padding: 15px 25px;
       width: auto;
       height: auto;
       color: $light;
@@ -404,7 +404,7 @@ hr {
       top: 50px;
    }
 }
-.text{
+.text {
    color: $smoky;
 }
 .introduce {
@@ -576,7 +576,7 @@ hr {
       visibility: hidden;
       //  opacity: 0;
       height: 0;
-      transition: visibility , height 0.5s;
+      transition: visibility, height 0.5s;
    }
 }
 // opacity 0.5s linear
@@ -641,42 +641,229 @@ hr {
    height: 5vh;
 }
 
-footer{
+.parentOfDotsSlider {
+   background-color: #111118;
+   width: 100%;
+   height: 80vh;
+   display: flex;
+   flex-direction: column;
+}
+.slideshow-container {
+   margin-top: 20px;
+   position: relative;
+   display: flex;
+   align-items: center;
+   height: 80vh;
+   width: 100%;
+   .readMore {
+      text-decoration: none;
+      font-weight: 700;
+      color: $succese_light;
+   }
+}
+.textOfCard {
+   margin-left: 20px;
+   font-family: none;
+   margin-right: 10%;
+   h1 {
+      margin-bottom: 0;
+      a {
+         text-decoration: none;
+         color: $light;
+         font-family: none;
+
+         &:hover {
+            color: $succese_light;
+         }
+      }
+   }
+
+   p {
+      margin-top: 0;
+   }
+}
+.main-card {
+   height: 50vh;
+   display: flex;
+   margin: 30px 10% 0 10%;
+   background-color: $Primary_dark;
+   border: 1px solid $Primary_dark  ;
+   color: $light;
+   .iconify {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      padding: 7px;
+   }
+   .excerpt {
+      margin-top: 28px;
+   }
+}
+
+/* Hide the images by default */
+.mySlides {
+   display: none;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+   cursor: pointer;
+   height: 8px;
+   width: 8px;
+   margin: 5px 5px 70px 0;
+   background-color: #bbb;
+   border-radius: 50%;
+   display: inline-block;
+   //   transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+   background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+   -webkit-animation-name: fade;
+   -webkit-animation-duration: 1.5s;
+   animation-name: fade;
+   animation-duration: 1.5s;
+   //animation-fill-mode: forwards;
+   animation-direction: alternate;
+}
+
+@-webkit-keyframes fade {
+   from {
+      transform: translate(100%);
+   }
+   to {
+      transform: translate(0);
+   }
+}
+
+@keyframes fade {
+   from {
+      transform: translate(100%);
+   }
+   to {
+      transform: translate(0);
+   }
+}
+.people {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 7%;
+   color: $smoky;
+   img {
+      width: 200px;
+   }
+   h1 {
+      font-size: 32px;
+      font-family: none;
+      text-align: center;
+      p {
+         font-size: $font_small;
+         margin-top: 7px;
+         margin-bottom: 0;
+         letter-spacing: 3px;
+         opacity: 0.8;
+      }
+   }
+}
+
+.textImg {
+   display: none;
+}
+.parentOfSecondSlider {
+   padding: 30px 200px;
+}
+
+.layoutImgTxt {
+   display: flex;
+   padding: 0 100px;
+   padding-bottom: 50px;
+   img {
+      border-radius: 50%;
+      height: 15vh;
+      margin: 30px 0;
+   }
+   .textSlides {
+      display: flex;
+      flex-direction: column;
+      text-align: justify;
+      margin-left: 25px;
+
+      h1 {
+         margin-bottom: 0;
+      }
+      h2 {
+         white-space: wrap;
+         margin-top: 0;
+         font-weight: 400;
+      }
+   }
+}
+
+/* The dots/bullets/indicators */
+.otherdot {
+   cursor: pointer;
+   height: 15px;
+   width: 15px;
+   margin: 0 2px;
+   background-color: $gainsBoro;
+   border-radius: 50%;
+   display: inline-block;
+   transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+   background-color: $gray;
+}
+
+/* Fading animation */
+.trans {
+   -webkit-animation-name: fade;
+   -webkit-animation-duration: 1.5s;
+   animation-name: fade;
+   animation-duration: 1.5s;
+}
+
+footer {
    display: flex;
    flex-direction: column;
    align-items: center;
    background-color: $sample;
-   img{
+   img {
       margin-top: 30px;
       width: 6rem;
    }
-   .footer-info{
+   .footer-info {
       display: flex;
-      .footer-items{
-         color: rgba($color: $light, $alpha: .7);
+      .footer-items {
+         color: rgba($color: $light, $alpha: 0.7);
          font-size: $font-medium;
          margin: 20px;
-         .icon{
-            border: solid $smoky .5px;
+         .icon {
+            border: solid $smoky 0.5px;
             border-radius: 50%;
-            padding:14px 15px;
-            margin-right: 15px; 
+            padding: 14px 15px;
+            margin-right: 15px;
          }
-         .icon2{
+         .icon2 {
             text-decoration: none;
-            color: rgba($color: $light, $alpha: .7);
+            color: rgba($color: $light, $alpha: 0.7);
          }
-         .icon2:hover{
+         .icon2:hover {
             color: $succese_light;
          }
-         .icon3:hover{
+         .icon3:hover {
             background-color: $succese_light;
             opacity: 1;
          }
       }
-      
    }
-   .spacing{
+   .spacing {
       height: 20px;
       border: 1px solid $smoky;
       border-radius: 20%;
@@ -684,44 +871,125 @@ footer{
       margin-bottom: 60px;
    }
 }
-.under-footer{
+.under-footer {
    display: flex;
    background-color: $Primary_dark;
    justify-content: space-between;
    align-items: center;
-   p{
-      color: $smoky;
+   p {
+      color: rgba($color: $light, $alpha: 0.6);
+      font-size: 12px;
       margin-left: 10px;
    }
-   img{
+   img {
       margin: 10px 0;
       width: 130px;
       margin-left: 90px;
    }
-   ul{
+   ul {
       display: flex;
       list-style: none;
       margin-right: 10px;
-      li a{
+      li a {
          text-decoration: none;
-         color: $smoky;
+         color: rgba($color: $light, $alpha: 0.6);
          margin: 4px;
+      }
+      li a:hover {
+         color: $succese_light;
       }
    }
 }
-.rooms-modal{
-   display: flex;
-}
-.close-modal {
-   color: #aaa;
-   font-size: larger;
+// .close-modal {
+//    color: #aaa;
+//    font-size: larger;
+//    position: absolute;
+//    right: -45px;
+//    top: 5px;
+//    width: 70px;
+//    text-decoration: none;
+//    &:hover {
+//      color: black;
+//      cursor: pointer;
+//    }
+//  }
+.modal-container {
    position: absolute;
-   right: -45px;
-   top: 5px;
-   width: 70px;
-   text-decoration: none;
-   &:hover {
-     color: black;
-     cursor: pointer;
+   top: 7rem;
+   left: 27rem;
+   max-width: 600px;
+   margin: auto;
+   overflow-x: auto;
+   z-index: 10;
+   display: none;
+}
+
+table {
+   font-family: "Open Sans", sans-serif;
+   position: relative;
+   border-collapse: collapse;
+   border-spacing: 0;
+   table-layout: auto;
+   width: 100%;
+   border: none;
+   border-radius: 0.5rem;
+   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+   * {
+      border: none;
    }
- }
+   white-space: nowrap;
+   thead tr {
+      color: $gray-800;
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: left;
+
+      th {
+         background: $gray-200;
+         padding: 0.75rem 1.5rem;
+         vertical-align: middle;
+      }
+   }
+
+   tbody {
+      tr:nth-child(odd) td {
+         background: $white;
+      }
+
+      tr:nth-child(even) td {
+         background: $gray-200;
+      }
+      td {
+         color: $gray-900;
+         text-align: left;
+         padding: 1.5rem 1.5rem;
+         vertical-align: middle;
+         font-size: 1.125rem;
+         font-weight: normal;
+      }
+   }
+
+   tr:last-child td:first-child {
+      border-bottom-left-radius: 0.5rem;
+   }
+
+   th:first-child {
+      border-top-left-radius: 0.5rem;
+   }
+
+   tr:last-child td:last-child {
+      border-bottom-right-radius: 0.5rem;
+   }
+
+   th:last-child {
+      border-top-right-radius: 0.5rem;
+   }
+
+   tr > th:first-child,
+   tr > td:first-child {
+      position: sticky;
+      left: 0;
+   }
+}

@@ -4,7 +4,6 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="./assets/style.css" />
       <title>Document</title>
@@ -124,25 +123,26 @@
                   </div>
                </div>
             </nav>
-         <div class="rooms-modal">
-            <span class="close" onclick="Close()">&times;</span>
-               <div id="myModal" class="modal">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>DATA1</th>
-                        <th>DATA2</th>
-                        <th>DATA3</th>
-                        <th>DATA4</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                     
-                    </tbody>
-                  </table>
-             </div>
-            </div>
+
+            <!-- modal to show avilable rooms -->
+            <div class="modal-container">
+               <table>
+                 <thead>
+                   <tr>
+                     <th>from</th>
+                     <th>to</th>
+                     <th>room</th>
+                     <th>bed</th>
+                   </tr>
+                 </thead>
+                 <tbody class="table-body">
+                  <!-- content of the modal table  -->
+                 </tbody>
+               </table>
+             </div> 
          </header>
+
+         <!-- slide bar that open with hamburger -->
          <div class="drawer-menu">
             <div class="just-padding">
                <a href="#">reservation & booking</a>
@@ -171,6 +171,7 @@
             </div>
          </div>
 
+      <!-- first image slider with jQuery -->
          <div class="slider">
             <a href="#0" class="next control"
                ><span class="iconify" data-icon="gridicons:arrow-right"></span
@@ -179,7 +180,7 @@
                ><span class="iconify" data-icon="gridicons:arrow-left"></span
             ></a>
 
-            <ul>
+            <ul class="UL-slider">
                <li class="firstImg slider-image">
                   <div class="slider-txt">
                      <div class="t2">RELAX &amp; REJUVENATE</div>
@@ -189,10 +190,11 @@
                      </div>
                   </div>
                </li>
+
                <li class="secondImg slider-image">
                   <div class="slider-txt">
-                     <div class="t2">INDOOR &amp; OUTDOOR</div>
-                     <div class="t1">ENJOY A LUXURY EXPERIENCE</div>
+                     <div class="t2 asd">INDOOR &amp; OUTDOOR</div>
+                     <div class="t1 asd">ENJOY A LUXURY EXPERIENCE</div>
                      <div>
                         <button class="slider-btn">rooms & suites</button>
                      </div>
@@ -208,24 +210,31 @@
             </ul>
          </div>
 
+
+         <!-- the booking box -->
          <div class="dark-center-box" >
             <div class="inputs">
               <div class="date-input">
                 <label for="arrival-date">check in date</label>
-                <input type="text" placeholder="select arrival date" onfocus="(this.type='date')" onblur="(this.type='text')" id="arrival-date">
+                <input  type="text" placeholder="select arrival date"  id="arrival-date">
               </div>
               <div class="date-input">
                 <label for="departure-date">check out date</label>
                 <input type="text" placeholder="select departure date" onfocus="(this.type='date')" onblur="(this.type='text')"  id="departure-date">
               </div>
+              <div class="date-input">
+               <label for="room">considered room</label>
+               <input  type="text" placeholder="number of bed" id="numOfBed">
+             </div>
             </div>
-      
          <div class="button-req">
             <div class="eff-req"></div>
                <a href="#" class="text-req">REQUEST A QUOTE</a>
             </div>
          </div>
       </div>
+
+      <!-- first text part on center of the page -->
          <div class="mainTxt" >
             <h1 class="welcomeTxt">WELCOME</h1>
             <h2 class="hotelTxt">XENIA HOTEL</h2>
@@ -243,6 +252,9 @@
             <h3>Yours truly,</h3>
             <h5>Richard</h5>
           </div>
+
+
+      <!-- three card with hover -->
          <div class="card-boxes">
             <div class="card">
                <div class="image">
@@ -296,6 +308,7 @@
                
             </div>
          </div>
+       <!-- twice carousel bed images with black backGraund   -->
          <div class="Bg-bed">
             <h2>GET 15% OFF TODAY</h2>
             <img class="Ornament" src="./assets/pic/Ornament.png" alt="Ornament">
@@ -307,6 +320,255 @@
           </div>
         
           </div>
+          <div class="parentOfDotsSlider">
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+              <!-- every card title and their images -->
+              <div class="mySlides fade">
+                <!--parent of whole card -->
+                <div class="main-card">
+                  <div class="textOfCard">
+                    <h1><a href="#"> SINGLE ROOM</a></h1>
+                    <p>SINGLE ROOM WITH SEA VIEW</p>
+                    <span class="iconify" data-icon="cil:tv"></span>
+                    <span class="iconify" data-icon="la:glass-cheers"></span>
+                    <span class="iconify" data-icon="ph:bathtub-fill"></span>
+                    <p class="excerpt">
+                      More than 100 rooms, suites and apartments have accommodated
+                      many illustrious residents, such as members of resort royal
+                      families, famous politicians and stars of film and opera. The
+                      hotel is a masterpiece rediscovered.
+                    </p>
+                    <a class="readMore" href="#">READ MORE</a>
+                  </div>
+                  <img
+                    src="./assets/pic/room_1_n_1-1024x683.jpg"
+                    style="width: 50%; height: 50vh"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <!-- every card title and their images -->
+              <div class="mySlides fade">
+                <!--parent of whole card -->
+                <div class="main-card">
+                  <div class="textOfCard">
+                    <h1><a href="#"> DOUBLE ROOM</a></h1>
+                    <p>A QUALITY ROOM WITH SEA OR MOUNT VIEW</p>
+                    <span class="iconify" data-icon="cil:tv"></span>
+                    <span class="iconify" data-icon="si-glyph:safe-box"></span>
+                    <span class="iconify" data-icon="jam:hairdryer"></span>
+                    <p class="excerpt">
+                      More than 100 rooms, suites and apartments have accommodated
+                      many illustrious residents, such as members of resort royal
+                      families, famous politicians and stars of film and opera. The
+                      hotel is a masterpiece rediscovered.
+                    </p>
+                    <a class="readMore" href="#">READ MORE</a>
+                  </div>
+                  <img
+                    src="./assets/pic/room-1.jpg"
+                    style="width: 50%; height: 50vh"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <!-- every card title and their images -->
+              <div class="mySlides fade">
+                <!--parent of whole card -->
+                <div class="main-card">
+                  <div class="textOfCard">
+                    <h1><a href="#"> FAMILY SUITE!</a></h1>
+                    <p>BRING YOUR FAMILY IN THIS SPACIOUS SUITE</p>
+                    <span class="iconify" data-icon="cil:tv"></span>
+                    <span class="iconify" data-icon="si-glyph:safe-box"></span>
+                    <span class="iconify" data-icon="jam:hairdryer"></span>
+                    <p class="excerpt">
+                      With just 30 villas, this stunning fully inclusive resort evokes
+                      the heritage of luxury dating back to the era of the Sultans.
+                      Superior Queen bathrooms include a room shower with a rainfall
+                      hotel.
+                    </p>
+                    <a class="readMore" href="#">READ MORE</a>
+                  </div>
+                  <img
+                    src="./assets/pic/room-3.jpg"
+                    style="width: 50%; height: 50vh"
+                    alt=""
+                  />
+                </div>
+              </div>
+      
+              <!-- every card title and their images -->
+              <div class="mySlides fade">
+                <!--parent of whole card -->
+                <div class="main-card">
+                  <div class="textOfCard">
+                    <h1><a href="#">DELUXE KING SUITE</a></h1>
+                    <p>KINGS AND QUEENS SLEEP HERE!</p>
+                    <span class="iconify" data-icon="cil:tv"></span>
+                    <span class="iconify" data-icon="si-glyph:safe-box"></span>
+                    <span class="iconify" data-icon="jam:hairdryer"></span>
+                    <p class="excerpt">
+                      With just 30 villas, this stunning fully inclusive resort evokes
+                      the heritage of luxury dating back to the era of the Sultans.
+                      Superior Queen bathrooms include a room shower with a rainfall
+                      hotel.
+                    </p>
+                    <a class="readMore" href="#">READ MORE</a>
+                  </div>
+                  <img
+                    src="./assets/pic/badd.jpg"
+                    style="width: 50%; height: 50vh"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div style="text-align: center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+          </div>
+      
+          <div class="people">
+            <h1>
+              TESTIMONIALS
+              <p>LOVELY PEOPLE - AMAZING EXPERIENCES</p>
+            </h1>
+            <img src="./assets/pic/Ornament.png" alt="" />
+          </div>
+          <!-- third slider-->
+          <div class="parentOfSecondSlider">
+            <div class="textImgSlider">
+              <div class="textImg trans">
+                <div class="layoutImgTxt">
+                  <img src="./assets/pic/profile-2.jpg" alt="" />
+                  <div class="textSlides">
+                    <h1>
+                      Since the Garden of Eden…
+                      <h2>
+                        Was great not have to use the inter-island terminal. The
+                        service is impeccable and they make you feel so welcome and
+                        everything is truly a can-do attitude.
+                      </h2>
+                    </h1>
+                    <span class="testimonial_author"
+                      >Christine Glassier <span>Interior Designer</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="textImg trans">
+                <div class="layoutImgTxt">
+                  <img src="./assets/pic/profile.jpg" alt="" />
+                  <div
+                    class="textSlides"
+                    style="display: flex; flex-direction: column"
+                  >
+                    <h1>HAD THE TIME OF OUR LIFE</h1>
+                    <h2>
+                      Our room was spacious and spotless. We had such a relaxing time
+                      and will recommend this hotel to all our friends. We will return
+                      for sure!…&nbsp;The service is impeccable and they make you feel
+                      so welcome and everything is truly a can-do attitude. The front
+                      office manager provides a special touch by remembering your
+                      visits.
+                    </h2>
+                    <span class="testimonial_author">Jasmine Karturo</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="textImg trans">
+                <div class="layoutImgTxt">
+                  <img src="./assets/pic/avatar-1-70x70.webp" alt="" />
+                  <div
+                    class="textSlides"
+                    style="display: flex; flex-direction: column"
+                  >
+                    <h1>Since the Garden of Eden…</h1>
+                    <p>
+                      Was great not have to use the inter-island terminal. The service
+                      is impeccable and they make you feel so welcome and everything
+                      is truly a can-do attitude.
+                    </p>
+                    <span class="testimonial_author">Christine Glassier</span>
+                    <span class="testimonial_author_role">Interior Designer</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="textImg trans">
+                <div class="layoutImgTxt">
+                  <img src="./assets/pic/avatar-3.jpg" alt="" />
+                  <div
+                    class="textSlides"
+                    style="display: flex; flex-direction: column"
+                  >
+                    <h1>Since the Garden of Eden…</h1>
+                    <p>
+                      Was great not have to use the inter-island terminal. The service
+                      is impeccable and they make you feel so welcome and everything
+                      is truly a can-do attitude.
+                    </p>
+                    <span class="testimonial_author">Christine Glassier</span>
+                    <span class="testimonial_author_role">Interior Designer</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="textImg trans">
+                <div class="layoutImgTxt">
+                  <img src="./assets/pic/avatar-4.jpg" alt="" />
+                  <div
+                    class="textSlides"
+                    style="display: flex; flex-direction: column"
+                  >
+                    <h1>Since the Garden of Eden…</h1>
+                    <p>
+                      Was great not have to use the inter-island terminal. The service
+                      is impeccable and they make you feel so welcome and everything
+                      is truly a can-do attitude.
+                    </p>
+                    <span class="testimonial_author">Christine Glassier</span>
+                    <span class="testimonial_author_role">Interior Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="textImg trans">
+                <div class="layoutImgTxt">
+                  <img src="./assets/pic/avatar-2.jpg" alt="" />
+                  <div
+                    class="textSlides"
+                    style="display: flex; flex-direction: column"
+                  >
+                    <h1>Since the Garden of Eden…</h1>
+                    <p>
+                      Was great not have to use the inter-island terminal. The service
+                      is impeccable and they make you feel so welcome and everything
+                      is truly a can-do attitude.
+                    </p>
+                    <span class="testimonial_author">Christine Glassier</span>
+                    <span class="testimonial_author_role">Interior Designer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div style="text-align: center">
+              <span class="otherdot" onclick="currentSlides(1)"></span>
+              <span class="otherdot" onclick="currentSlides(2)"></span>
+              <span class="otherdot" onclick="currentSlides(3)"></span>
+              <span class="otherdot" onclick="currentSlides(4)"></span>
+              <span class="otherdot" onclick="currentSlides(5)"></span>
+              <span class="otherdot" onclick="currentSlides(6)"></span>
+            </div> -->
+          </div>
+
+
           <footer>
              <div>
                 <img src="./assets/pic/logo.webp" alt="logo">
@@ -321,7 +583,8 @@
           <div class="under-footer">
              <p>COPYRIGHT © 2020 ALL RIGHTS RESERVED XENIA HOTEL</p>
              <img src="./assets/pic/award.webp" alt="logo">
-             <ul id="menu-footer-bar-menu" class="footerbar_menu"><li id="menu-item-491" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-19 current_page_item menu-item-491 active"><a title="Home" href="https://hotel-xenia.plethorathemes.com/">Home</a></li>
+             <ul id="menu-footer-bar-menu" class="footerbar_menu">
+               <li class="under-footer-li"><a title="Home" href="#">Home</a></li>
                <li class="under-footer-li"><a title="Rooms" href="#">Rooms</a></li>
                <li class="under-footer-li"><a title="Package offer" href="#">Package offer</a></li>
                <li class="under-footer-li"><a title="Spa Salon" href="#">Spa Salon</a></li>
@@ -330,6 +593,8 @@
                </ul>
           </div>
       </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
       <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
       <script src="./assets/main.js"></script>
    </body>

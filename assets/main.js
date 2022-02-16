@@ -137,7 +137,7 @@ $(document).ready(function () {
    });
 
    $(".three").click(function () {
-      if ($(".three").hasClass("active")) {
+      if ($(".three").hasClass("Active")) {
          closeMenu();
       } else {
          openMenu();
@@ -146,7 +146,7 @@ $(document).ready(function () {
 
 
    function openMenu() {
-      $(".three").addClass("active");
+      $(".three").addClass("Active");
       $(".drawer-menu").animate(
          {
             width: "25vw",
@@ -172,7 +172,7 @@ $(document).ready(function () {
    }
 
    function closeMenu() {
-      $(".three").removeClass("active");
+      $(".three").removeClass("Active");
       $(".drawer-menu").animate(
          {
             width: "0",
@@ -427,11 +427,13 @@ $(document).ready(function () {
       function () {
          $(".textShowBtn").css("color", "black");
          $(".hiddenBtn").css({
-            bottom: "-80px",
+            bottom: "-40px",
          });
       }
    );
+
    $('#arrival-date').datepicker();
+   $('#departure-date').datepicker();
    $('.button-req').click((e) => {
      let reqArrivalDate = new Date($('#arrival-date').val()).getTime(); 
      let reqDepartureDate= new Date( $('#departure-date').val()).getTime(); 

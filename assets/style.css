@@ -1,5 +1,250 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Sans+Pro:ital,wght@0,300;1,200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Source+Sans+Pro:ital,wght@0,300;1,200&display=swap");
+@media (min-width: 980px) {
+  .first-logo {
+    margin: 1.5rem 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .first-logo {
+    margin: 1.5rem 2rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .navbar-ul {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .navbar-ul {
+    display: none;
+  }
+}
+
+@media (min-width: 980px) {
+  .navbar-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 980px) {
+  .navbar-ul li {
+    margin: 0 3%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar-ul li {
+    margin: 0 5%;
+  }
+}
+
+@media (min-width: 980px) {
+  .button {
+    margin: 5px 0 5px 20%;
+    padding: 10px 10px 0 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .button {
+    margin: 5px 0 5px 30%;
+  }
+}
+
+@media (min-width: 780px) {
+  .dark-center-box {
+    width: 100%;
+    height: 50vh;
+  }
+}
+
+@media (min-width: 600px) {
+  .dark-center-box .inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 780px) {
+  .dark-center-box .inputs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (max-width: 599px) {
+  .dark-center-box input {
+    padding: 40px 23vw;
+  }
+}
+
+@media (min-width: 600px) {
+  .dark-center-box input {
+    padding: 40px 33vw;
+  }
+}
+
+@media (min-width: 780px) {
+  .dark-center-box input {
+    padding: 40px 15px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 980px) {
+  .dark-center-box input {
+    padding: 35px 20px;
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .dark-center-box input {
+    padding: 40px 60px;
+  }
+}
+
+@media (max-width: 599px) {
+  .mainTxt .welcomeTxt {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .mainTxt .welcomeTxt {
+    display: none;
+  }
+}
+
+@media (min-width: 780px) {
+  .mainTxt .welcomeTxt {
+    display: block;
+    text-align: center;
+    font-size: 180px;
+  }
+}
+
+@media (max-width: 599px) {
+  .card-boxes {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card-boxes .image img, .card-boxes .card-hover {
+    width: 100%;
+  }
+  .card-boxes .image:hover .card-hover {
+    height: 99.5%;
+  }
+  .card-boxes .image:hover .card-hover .card-hover-text {
+    visibility: visible;
+    height: 200px;
+  }
+}
+
+@media (min-width: 600px) {
+  .card-boxes {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card-boxes .image img, .card-boxes .card-hover {
+    width: 100%;
+  }
+  .card-boxes .image:hover .card-hover {
+    height: 99.5%;
+  }
+  .card-boxes .image:hover .card-hover .card-hover-text {
+    visibility: visible;
+    height: 200px;
+  }
+}
+
+@media (min-width: 780px) {
+  .card-boxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .card-boxes .image img, .card-boxes .card-hover {
+    width: 250px;
+  }
+  .card-boxes .card:hover .card-hover {
+    height: 373px;
+  }
+  .card-boxes .card:hover .card-hover .card-hover-text {
+    visibility: visible;
+    height: 200px;
+  }
+}
+
+@media (min-width: 980px) {
+  .card-boxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .card-boxes .image img, .card-boxes .card-hover {
+    width: 300px;
+  }
+  .card-boxes .card:hover .card-hover {
+    height: 450px;
+  }
+  .card-boxes .card:hover .card-hover .card-hover-text {
+    visibility: visible;
+    height: 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-boxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 50px 100px;
+  }
+  .card-boxes .image img, .card-boxes .card-hover {
+    width: 350px;
+  }
+  .card-boxes .card:hover .card-hover {
+    height: 525px;
+  }
+  .card-boxes .card:hover .card-hover .card-hover-text {
+    visibility: visible;
+    height: 200px;
+  }
+}
+
 body {
   margin: 0;
   font-size: 14px;
@@ -10,10 +255,14 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+header {
+  width: 100%;
+}
+
 .navbar {
   position: absolute;
   z-index: 10;
-  width: 100vw;
+  width: 100%;
   height: 15vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,29 +279,20 @@ body {
 
 .navbar .first-logo {
   width: 6rem;
-  margin: 1.5rem 2rem;
 }
 
 .navbar .navbar-ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   list-style: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.navbar .navbar-ul li {
-  margin: 0 5%;
-}
-
 .navbar .button {
-  margin: 5px 0 5px 30%;
   cursor: pointer;
   position: relative;
   padding: 10px 10px 0 15px;
-  margin-left: 30vw;
+  margin-left: 25vw;
   width: 300px;
   height: 40px;
   text-align: center;
@@ -389,6 +629,7 @@ hr {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  width: 100%;
 }
 
 .secondImg {
@@ -396,6 +637,7 @@ hr {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  width: 100%;
 }
 
 .thirdImg {
@@ -403,6 +645,7 @@ hr {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  width: 100%;
 }
 
 .slider {
@@ -443,7 +686,6 @@ hr {
 }
 
 .slider ul li {
-  display: inline-block;
   margin: 0;
   float: left;
   padding: 0;
@@ -491,32 +733,37 @@ hr {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .mainTxt .welcomeTxt {
   font-family: none;
   font-weight: 100;
-  font-size: 180px;
-  left: 180px;
   opacity: 0.1;
   margin-top: 0;
   position: absolute;
+  top: 0;
 }
 
 .mainTxt .hotelTxt {
   font-family: none;
   position: relative;
-  top: 60px;
+  top: 10px;
   font-size: 40px;
   text-align: center;
   line-height: 1.1;
 }
 
 .mainTxt .lastTxt {
-  font-family: none;
+  font-family: "Source Sans Pro", sans-serif;
   position: relative;
-  top: 40px;
-  font-size: 25px;
+  bottom: 20px;
+  font-size: 16px;
   font-weight: 300;
   letter-spacing: 3px;
   text-align: center;
@@ -525,9 +772,6 @@ hr {
 
 .mainTxt .Ornament-image img {
   width: 200px;
-  position: relative;
-  left: 520px;
-  top: 50px;
 }
 
 .text {
@@ -604,21 +848,10 @@ hr {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 90vw;
-  height: 40vh;
+  width: 90%;
   bottom: 5rem;
   left: 4.5rem;
   background-color: #171720;
-}
-
-.dark-center-box .inputs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
 }
 
 .dark-center-box .date-input {
@@ -640,15 +873,10 @@ hr {
 .dark-center-box .date-input input {
   background-color: #1F1F2C;
   border: 1px solid #1F1F2C;
-  padding: 40px 90px;
   margin: 10px;
-  font-size: 16px;
 }
 
 .button-req {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -689,25 +917,12 @@ hr {
   z-index: 1;
 }
 
-.card-boxes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 50px 100px;
-}
-
 .card-boxes .image img {
-  width: 350px;
-}
-
-.card-boxes .image {
   position: relative;
 }
 
 .card-boxes .card {
-  padding: 10px;
+  margin: 10px;
   position: relative;
 }
 
@@ -718,26 +933,16 @@ hr {
   color: #f4f4f4;
   position: absolute;
   bottom: 0;
-  padding: 15px 30px;
+  padding: 20px 30px;
 }
 
 .card-boxes .card-hover {
   position: absolute;
   bottom: 5px;
-  width: 350px;
   height: 0;
   background-color: rgba(17, 17, 17, 0.5);
   -webkit-transition: 0.2s height;
   transition: 0.2s height;
-}
-
-.card-boxes .image:hover .card-hover {
-  height: 525px;
-}
-
-.card-boxes .image:hover .card-hover .card-hover-text {
-  visibility: visible;
-  height: 200px;
 }
 
 .card-boxes .card:hover h4 {
@@ -786,16 +991,17 @@ hr {
   font-weight: 700;
 }
 
-.Bg-bed h2 {
-  line-height: 0.9;
+.Bg-bed h4 {
+  line-height: 0.7;
   color: #323232;
   opacity: 1;
   font-family: "Playfair Display", serif;
 }
 
 .Bg-bed p {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 200;
+  letter-spacing: 1px;
   line-height: 1.5;
   font-family: "Source Sans Pro", sans-serif;
 }
@@ -803,17 +1009,17 @@ hr {
 .buttonShowRooms {
   cursor: pointer;
   position: relative;
-  padding-bottom: 10px;
-  width: 180px;
+  width: 160px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
+  height: 40px;
   border: 1px solid #323232;
   background-color: transparent;
 }
 
 .buttonShowRooms a {
-  font-size: 16px;
+  font-size: 14px;
   text-decoration: none;
   text-align: center;
   -webkit-transition: all 0.5s ease;
@@ -821,13 +1027,14 @@ hr {
   z-index: 1;
   color: #111;
   margin-left: 15%;
-  position: relative;
+  position: absolute;
+  bottom: 10px;
 }
 
 .buttonShowRooms .hiddenBtn {
-  width: 180px;
-  height: 80px;
-  bottom: -80px;
+  width: 160px;
+  height: 40px;
+  bottom: -40px;
   left: 0px;
   background: #111;
   position: absolute;
@@ -837,8 +1044,8 @@ hr {
 }
 
 .Ornament {
-  width: 10%;
-  height: 5vh;
+  width: 150px;
+  height: 6vh;
 }
 
 .parentOfDotsSlider {
@@ -857,12 +1064,6 @@ hr {
 .slideshow-container {
   margin-top: 20px;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   height: 80vh;
   width: 100%;
 }
@@ -873,23 +1074,38 @@ hr {
   color: #6fb586;
 }
 
+.slideshow-container .readMore:hover .read-more-hover {
+  visibility: visible;
+  width: 65px;
+}
+
+.slideshow-container .read-more-hover {
+  width: 0;
+  height: .4px;
+  background-color: #6fb586;
+  margin-left: 0;
+  -webkit-transition: all ease .6s;
+  transition: all ease .6s;
+  visibility: hidden;
+}
+
 .textOfCard {
   margin-left: 20px;
   font-family: none;
   margin-right: 10%;
 }
 
-.textOfCard h1 {
+.textOfCard h2 {
   margin-bottom: 0;
 }
 
-.textOfCard h1 a {
+.textOfCard h2 a {
   text-decoration: none;
   color: #f4f4f4;
   font-family: none;
 }
 
-.textOfCard h1 a:hover {
+.textOfCard h2 a:hover {
   color: #6fb586;
 }
 
@@ -990,13 +1206,13 @@ hr {
   width: 200px;
 }
 
-.people h1 {
+.people h2 {
   font-size: 32px;
   font-family: none;
   text-align: center;
 }
 
-.people h1 p {
+.people h2 p {
   font-size: 14px;
   margin-top: 7px;
   margin-bottom: 0;
@@ -1038,11 +1254,11 @@ hr {
   margin-left: 25px;
 }
 
-.layoutImgTxt .textSlides h1 {
+.layoutImgTxt .textSlides h2 {
   margin-bottom: 0;
 }
 
-.layoutImgTxt .textSlides h2 {
+.layoutImgTxt .textSlides h3 {
   white-space: wrap;
   margin-top: 0;
   font-weight: 400;

@@ -1,0 +1,214 @@
+.firstImg {
+  background-image: url("pic/spa.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.secondImg {
+  background-image: url("pic/slider_n_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.thirdImg {
+  background-image: url("pic/slide_n_2_o.jpg ");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
+
+.slider .slider-txt {
+  margin-top: 630px;
+}
+
+.slider .t1,
+.slider .t2 {
+  color: #f4f4f4;
+  font-family: "Playfair Display", serif;
+}
+
+.slider .slider-btn {
+  text-transform: uppercase;
+  padding: 10px 30px;
+  color: #f4f4f4;
+  background: rgba(244, 244, 244, 0);
+  border: 1px solid #f4f4f4;
+}
+
+.slider ul {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  list-style: none;
+}
+
+.slider ul li {
+  margin: 0;
+  float: left;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  color: #323232;
+}
+
+.slider .control {
+  position: absolute;
+  top: 40%;
+  z-index: 0;
+  display: block;
+  width: auto;
+  height: auto;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.slider .control:hover {
+  opacity: 0.9;
+}
+
+.slider .prev {
+  left: 0px;
+}
+
+.slider .next {
+  right: 0px;
+}
+
+.mainBtn {
+  cursor: pointer;
+  position: relative;
+  width: 160px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  height: 40px;
+  border: 1px solid #f4f4f4;
+  background-color: transparent;
+}
+
+.mainBtn a {
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 1;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 15%;
+  position: absolute;
+}
+
+.mainBtn .hiddenPart {
+  width: 160px;
+  height: 40px;
+  bottom: -40px;
+  left: 0px;
+  background: #f4f4f4;
+  position: absolute;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.mainBtn2 {
+  cursor: pointer;
+  position: relative;
+  width: 160px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  height: 40px;
+  border: 1px solid #f4f4f4;
+  background-color: transparent;
+}
+
+.mainBtn2 a {
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 1;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 15%;
+  position: absolute;
+}
+
+.mainBtn2 .hiddenPart2 {
+  width: 160px;
+  height: 40px;
+  bottom: -40px;
+  left: 0px;
+  background: #f4f4f4;
+  position: absolute;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.mainBtn3 {
+  cursor: pointer;
+  position: relative;
+  width: 160px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  height: 40px;
+  border: 1px solid #f4f4f4;
+  background-color: transparent;
+}
+
+.mainBtn3 a {
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 1;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 15%;
+  position: absolute;
+}
+
+.mainBtn3 .hiddenPart3 {
+  width: 160px;
+  height: 40px;
+  bottom: -40px;
+  left: 0px;
+  background: #f4f4f4;
+  position: absolute;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+/*# sourceMappingURL=slider1.css.map */

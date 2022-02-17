@@ -1,0 +1,475 @@
+.navbar {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  background-color: rgba(17, 17, 17, 0.4);
+  color: #f4f4f4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.navbar .first-logo {
+  width: 6rem;
+  position: relative;
+}
+
+.navbar .navbar-ul {
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .button {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 10px 0 15px;
+  margin-left: 25vw;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  color: #f4f4f4;
+  background-color: #c5bc58;
+}
+
+.navbar .button a {
+  white-space: nowrap;
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 1;
+  color: #f4f4f4;
+  text-decoration: none;
+  position: relative;
+}
+
+.navbar .button .eff {
+  width: 300px;
+  height: 40px;
+  bottom: -50px;
+  left: 0;
+  background: #f4f4f4;
+  position: absolute;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.navbar .three {
+  margin-left: 2rem;
+  width: 23.8%;
+}
+
+.navbar .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1% 0 1% 3.6%;
+}
+
+.navbar .col:first-of-type {
+  margin-left: 2rem;
+}
+
+.navbar .hamburger {
+  margin-left: 1rem;
+}
+
+.navbar .line {
+  background-color: #f4f4f4;
+  width: 20px;
+  height: 1px;
+  margin: 5px 0;
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.navbar .hamburger:hover {
+  cursor: pointer;
+}
+
+.navbar #hamburger-1.is-active .line:nth-child(1) {
+  -webkit-transform: translateY(13px) rotate(-45deg);
+  transform: translateY(13px) rotate(-45deg);
+}
+
+.navbar #hamburger-1.is-active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar #hamburger-1.is-active .line:nth-child(3) {
+  -webkit-transform: translateY(-13px) rotate(45deg);
+  transform: translateY(-13px) rotate(45deg);
+}
+
+.dropbtn {
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+#ep {
+  opacity: 0.5;
+}
+
+#arrowDown {
+  opacity: 0.5;
+}
+
+.dropdown-content {
+  top: 30px;
+  display: none;
+  position: absolute;
+  background-color: #111;
+  min-width: 140px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #f4f4f4;
+  padding: 8px 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.homelight {
+  margin-top: 15%;
+}
+
+.homelight hr {
+  border: 0.1px solid #6fb586;
+}
+
+.homedark {
+  margin-bottom: 5%;
+}
+
+.homedark .hrDark {
+  width: 0;
+  border: 0.1px solid #171720;
+  margin-left: 0;
+}
+
+.moredropdown {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.moredropdown-content {
+  display: none;
+  position: absolute;
+  top: 30px;
+  background-color: black;
+  min-width: 190px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.moredropdown-content a {
+  color: #f4f4f4;
+  padding: 12px 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.moredropdown-content a button {
+  border-radius: 2px;
+  border: 1px solid #d9534f;
+  background-color: #d9534f;
+  color: #f4f4f4;
+}
+
+hr {
+  border: 0.1px solid #6fb586;
+}
+
+.hoverLine {
+  background-color: #6fb586;
+  width: 0px;
+  height: 1px;
+  margin-top: 8px;
+}
+
+.hoverLineRooms {
+  background-color: #6fb586;
+  width: 0px;
+  height: 1px;
+  margin-top: 8px;
+}
+
+.hoverLineLocation {
+  background-color: #6fb586;
+  width: 0px;
+  height: 1px;
+  margin-top: 8px;
+}
+
+.hoverLineAct {
+  background-color: #6fb586;
+  width: 0px;
+  height: 1px;
+  margin-top: 8px;
+}
+
+.hoverLineRes {
+  background-color: #6fb586;
+  width: 0px;
+  height: 1px;
+  margin-top: 8px;
+}
+
+.hoverLinespa {
+  background-color: #6fb586;
+  width: 0px;
+  height: 1px;
+  margin-top: 8px;
+}
+
+.hoverLineContact {
+  background-color: #6fb586;
+  width: 0px;
+  height: 1px;
+  margin-top: 8px;
+}
+
+.hoverLineShop {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 8px;
+}
+
+.hoverLineGallery {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 8px;
+}
+
+.hoverLineHotel {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 8px;
+}
+
+.hoverLineOffer {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 8px;
+}
+
+.hoverLineBlog {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 8px;
+}
+
+.hoverLineAdmin {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 8px;
+}
+
+.hoverLineAll {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 8px;
+}
+
+.hoverLineReserve {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 8px;
+}
+
+.hoverLineGrid {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 2px;
+}
+
+.hoverLineLi {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 2px;
+}
+
+.hoverLineMasonry {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 2px;
+}
+
+.hoverLineTest {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 2px;
+}
+
+.hoverLineShort {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 2px;
+}
+
+.hoverLineSlider {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 2px;
+}
+
+.hoverLineRService {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 2px;
+}
+
+.hoverLineView {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 2px;
+}
+
+.hoverLineSingle {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 2px;
+}
+
+.hoverLineSingleView {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 2px;
+}
+
+.hoverLinePost {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 2px;
+}
+
+.hoverLineFull {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 2px;
+}
+
+.hoverLineErr {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 2px;
+}
+
+.hoverLineTheme {
+  background-color: #6fb586;
+  width: 150px;
+  height: 1px;
+  margin-top: 2px;
+}
+
+.drawer-menu {
+  position: fixed;
+  right: 0;
+  background-color: #111;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 0vw;
+  padding-top: 110px;
+  line-height: 30px;
+  overflow-y: scroll;
+}
+
+.drawer-menu .just-padding {
+  padding-left: 20px;
+}
+
+.drawer-menu .just-padding > a {
+  text-transform: uppercase;
+  color: #f4f4f4;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.drawer-menu .nav-open-menu {
+  display: none;
+}
+
+.drawer-menu p {
+  color: #f4f4f4;
+}
+
+.drawer-menu .border-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-left: 1.5px solid #f4f4f4;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+.drawer-menu .border-side a {
+  text-transform: uppercase;
+  color: #f4f4f4;
+  text-decoration: none;
+  font-size: 13px;
+}
+/*# sourceMappingURL=navbar.css.map */

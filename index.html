@@ -12,7 +12,7 @@
    </head>
    <body>
       <div class="contaner">
-         <header>
+         <header id="header">
             <nav class="navbar">
                <img
                   class="first-logo"
@@ -143,53 +143,204 @@
                </table>
              </div> 
          </header>
-
+          <a class="return-to-top" href="#header" id="return-to-top">
+            <i class="back-top fa fa-chevron-up"></i>
+          </a>
          <!-- slide bar that open with hamburger -->
          <div class="drawer-menu">
             <div class="just-padding">
-               <a href="#">reservation & booking</a>
-               <br />
-               <a href="#">GRIDS & MASONRY VIEWS </a>
-               <div class="border-side">
-                  <a href="#">ROOMS LIST GRID </a>
-                  <a href="#"> BLOG MASONRY GRID</a>
-                  <a href="#">TESTIMONIALS MASONRY GRID</a>
-               </div>
-               <a href="#">SLIDER SHORTCODES</a>
-               <div class="border-side">
-                  <a href="#">Room Sliders</a>
-                  <a href="#">Services Sliders</a>
-               </div>
-               <a href="#">Single Page Views</a>
-               <div class="border-side">
-                  <a href="#">"Room Single View</a>
-                  <a href="#">Service Single View</a>
-                  <a href="#">Post Single View</a>
-                  <a href="#">Post Single Fullscreen</a>
-               </div>
-               <a href="#">Error 404 Page</a>
-               <a href="#">Buy this theme!</a>
-              <p>This is a sidebar that can be used to put an extra menu with details that don't need to be on the main menu. It also serves as the mobile menu area!</p>
+              <div class="nav-open-menu">
+                <ul class="navbar-ul">
+                  <div class="dropdown">
+                     <li id="home" class="dropbtn">
+                        home
+                        <hr />
+                     </li>
+                     <span
+                        class="iconify"
+                        id="ep"
+                        data-icon="ep:arrow-down"
+                     ></span>
+
+                     <div class="dropdown-content">
+                        <a class="homelight" href="#"
+                           >HOME LIGHT
+                           <hr />
+                        </a>
+                        <a href="#" class="homedark"
+                           >HOME DARK
+                           <hr class="hrDark" />
+                        </a>
+                     </div>
+                  </div>
+                  <li class="rooms">
+                     rooms
+                     <div class="hoverLineRooms"></div>
+                  </li>
+
+                  <li class="location">
+                     location
+                     <div class="hoverLineLocation"></div>
+                  </li>
+                  <li class="act">
+                     activities
+                     <div class="hoverLineAct"></div>
+                  </li>
+
+                  <li class="res">
+                     restaurant
+                     <div class="hoverLineRes"></div>
+                  </li>
+                  <li class="spa">
+                     spa
+                     <div class="hoverLinespa"></div>
+                  </li>
+                  <li class="contact">
+                     contact
+                     <div class="hoverLineContact"></div>
+                  </li>
+                  <div class="moredropdown">
+                     <li class="moredropbtn">
+                        MORE
+                        <div class="hoverLine"></div>
+                     </li>
+                     <span
+                        class="iconify"
+                        id="arrowDown"
+                        data-icon="ep:arrow-down"
+                     ></span>
+                     <div class="moredropdown-content">
+                        <a class="shop" href="#"
+                           >WOOCOMMERCE SHOP
+                           <div class="hoverLineShop"></div>
+                        </a>
+                        <a class="gallery" href="#"
+                           >GALLERY
+                           <div class="hoverLineGallery"></div>
+                        </a>
+                        <a class="hotel" href="#"
+                           >HOTEL GYM
+                           <div class="hoverLineHotel"></div>
+                        </a>
+                        <a class="offer" href="#"
+                           >PACKAGE OFFER
+                           <div class="hoverLineOffer"></div>
+                        </a>
+                        <a class="blog" href="#"
+                           >BLOG
+                           <div class="hoverLineBlog"></div>
+                        </a>
+                        <a class="admin" href="#"
+                           >ADMIN DEMO
+                           <button>NEW!</button>
+                           <div class="hoverLineAdmin"></div>
+                        </a>
+                        <a class="all" href="#"
+                           >ALL DEMOES
+                           <button>NEW!</button>
+                           <div class="hoverLineAll"></div>
+                        </a>
+                     </div>
+                  </div>
+               </ul>
+              </div>
+              <a class="reserve" href="#"
+                >reservation & booking
+                <div class="hoverLineReserve"></div>
+              </a>
+              <br />
+              <a class="grid" href="#"
+                >GRIDS & MASONRY VIEWS
+                <div class="hoverLineGrid"></div>
+              </a>
+              <div class="border-side">
+                <a class="roomLi" href="#"
+                  >ROOMS LIST GRID
+                  <div class="hoverLineLi"></div>
+                </a>
+                <a class="blog" href="#">
+                  BLOG MASONRY GRID
+                  <div class="hoverLineMasonry"></div>
+                </a>
+                <a class="test" href="#"
+                  >TESTIMONIALS MASONRY GRID
+                  <div class="hoverLineTest"></div>
+                </a>
+              </div>
+              <a class="shortCods" href="#"
+                >SLIDER SHORTCODES
+                <div class="hoverLineShort"></div>
+              </a>
+              <div class="border-side">
+                <a class="sliderRoom" href="#"
+                  >Room Sliders
+                  <div class="hoverLineSlider"></div>
+                </a>
+                <a class="sevice" href="#"
+                  >Services Sliders
+                  <div class="hoverLineRService"></div>
+                </a>
+              </div>
+              <a class="view" href="#"
+                >Single Page Views
+                <div class="hoverLineView"></div>
+              </a>
+              <div class="border-side">
+                <a class="singleroom" href="#"
+                  >"Room Single View
+                  <div class="hoverLineSingle"></div>
+                </a>
+                <a class="singleView" href="#"
+                  >Service Single View
+                  <div class="hoverLineSingleView"></div>
+                </a>
+                <a class="post" href="#"
+                  >Post Single View
+                  <div class="hoverLinePost"></div>
+                </a>
+                <a class="Fullscreen" href="#"
+                  >Post Single Fullscreen
+                  <div class="hoverLineFull"></div>
+                </a>
+              </div>
+              <a class="err" href="#"
+                >Error 404 Page
+                <div class="hoverLineErr"></div>
+              </a>
+              <a class="theme" href="#"
+                >Buy this theme!
+                <div class="hoverLineTheme"></div>
+              </a>
+              <hr />
+              <p class="paragraph">
+                This is a sidebar that can be used to put an extra menu with details
+                that don't need to be on the main menu. It also serves as the mobile
+                menu area!!
+              </p>
+    
+              <h2 style="color: red">(+30) 210 1234567</h2>
             </div>
-         </div>
+          </div>
 
       <!-- first image slider with jQuery -->
          <div class="slider">
             <a href="#0" class="next control"
-               ><span class="iconify" data-icon="gridicons:arrow-right"></span
-            ></a>
+               ><img src="./assets/pic/right-arrow.png" alt="right-arrow"></a>
             <a href="#0" class="prev control"
-               ><span class="iconify" data-icon="gridicons:arrow-left"></span
-            ></a>
+               ><img src="./assets/pic/left-arrow.png" alt="left-arrow"></a>
 
             <ul class="UL-slider">
                <li class="firstImg slider-image">
                   <div class="slider-txt">
                      <div class="t2">RELAX &amp; REJUVENATE</div>
                      <div class="t1">WITH SPA SALON FACILITIES</div>
-                     <div>
+                     <div class="mainBtn">
+                      <div class="hiddenPart"></div>
+                      <a href="#" class="maintag"> DISCOVER TREATMENTS</a>
+                    </div>
+                     <!-- <div>
                         <button class="slider-btn">discover treatments</button>
-                     </div>
+                     </div> -->
                   </div>
                </li>
 
@@ -197,16 +348,25 @@
                   <div class="slider-txt">
                      <div class="t2 asd">INDOOR &amp; OUTDOOR</div>
                      <div class="t1 asd">ENJOY A LUXURY EXPERIENCE</div>
-                     <div>
+                     <!-- <div>
                         <button class="slider-btn">rooms & suites</button>
-                     </div>
+                     </div> -->
+                     <div class="mainBtn2">
+                      <div class="hiddenPart2"></div>
+                      <a href="#" class="maintag2">  ROOMS & SUITS</a>
+                    </div>
                   </div>
                </li>
                <li class="thirdImg slider-image">
                   <div class="slider-txt">
                      <div class="t2">WILD BEAUTY</div>
                      <div class="t1">IN THE PERFECT LOCATION</div>
-                     <button class="slider-btn">explor</button>
+                    
+                     <div class="mainBtn3">
+                        <div class="hiddenPart3"></div>
+                        <a href="#" class="maintag3">EXPLORE</a>
+                    </div>
+                     <!-- <button class="slider-btn">explor</button> -->
                   </div>
                </li>
             </ul>
@@ -347,7 +507,6 @@
                   </div>
                   <img
                     src="./assets/pic/room_1_n_1-1024x683.jpg"
-                    style="width: 50%; height: 50vh"
                     alt=""
                   />
                 </div>
@@ -568,14 +727,14 @@
                 </div>
               </div>
             </div>
-            <!-- <div style="text-align: center">
+            <div style="text-align: center">
               <span class="otherdot" onclick="currentSlides(1)"></span>
               <span class="otherdot" onclick="currentSlides(2)"></span>
               <span class="otherdot" onclick="currentSlides(3)"></span>
               <span class="otherdot" onclick="currentSlides(4)"></span>
               <span class="otherdot" onclick="currentSlides(5)"></span>
               <span class="otherdot" onclick="currentSlides(6)"></span>
-            </div> -->
+            </div>
           </div>
 
 

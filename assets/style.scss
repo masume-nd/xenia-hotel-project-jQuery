@@ -1,6 +1,8 @@
 @import "colors";
 @import "variables";
 @import "mixin";
+@import "./navbar/navbar";
+@import "./slider1/slider1";
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Sans+Pro:ital,wght@0,300;1,200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Source+Sans+Pro:ital,wght@0,300;1,200&display=swap");
 
@@ -8,6 +10,7 @@ body {
    margin: 0;
    font-size: 14px;
    position: relative;
+   background-color: $light;
 }
 * {
    font-family: "Source Sans Pro", sans-serif;
@@ -15,358 +18,31 @@ body {
 header {
    width: 100%;
 }
-
-.navbar {
-   position: absolute;
-   z-index: 10;
-   width: 100%;
-   height: 15vh;
-   display: flex;
-   align-items: center;
-   text-transform: uppercase;
-   background-color: rgba($color: $dark, $alpha: 0.4);
-   color: $light;
-   box-sizing: border-box;
-
-   .first-logo {
-      width: 6rem;
-   }
-   .navbar-ul {
-      list-style: none;
-      align-items: center;
-   }
-   .button {
-      //
-      cursor: pointer;
-      position: relative;
-      padding: 10px 10px 0 15px;
-      margin-left: 25vw;
-      width: 300px;
-      height: 40px;
-      text-align: center;
-      box-sizing: border-box;
-      overflow: hidden;
-      color: $light;
-      background-color: $warning;
-
-      a {
-         white-space: nowrap;
-         text-decoration: none;
-         transition: all 0.5s ease;
-         z-index: 1;
-         color: $light;
-         text-decoration: none;
-         position: relative;
-      }
-      .eff {
-         width: 300px;
-         height: 40px;
-         bottom: -50px;
-         left: 0;
-         background: $light;
-         position: absolute;
-         transition: all 0.5s ease;
-         z-index: 1;
-      }
-   }
-   //hamburger lines
-   .three {
-      margin-left: 2rem;
-      width: 23.8%;
-   }
-   .col {
-      display: flex;
-      float: left;
-      align-items: center;
-      margin: 1% 0 1% 3.6%;
-   }
-   .col:first-of-type {
-      margin-left: 2rem;
-   }
-   .hamburger {
-      margin-left: 1rem;
-   }
-   .line {
-      background-color: $light;
-      width: 20px;
-      height: 1px;
-      margin: 5px 0;
-      display: block;
-      transition: 0.5s;
-      transform-origin: left;
-   }
-   .hamburger:hover {
-      cursor: pointer;
-   }
-
-   #hamburger-1.is-active .line:nth-child(1) {
-      -webkit-transform: translateY(13px) rotate(-45deg);
-      -ms-transform: translateY(13px) rotate(-45deg);
-      -o-transform: translateY(13px) rotate(-45deg);
-      transform: translateY(13px) rotate(-45deg);
-   }
-   #hamburger-1.is-active .line:nth-child(2) {
-      opacity: 0;
-   }
-   #hamburger-1.is-active .line:nth-child(3) {
-      -webkit-transform: translateY(-13px) rotate(45deg);
-      -ms-transform: translateY(-13px) rotate(45deg);
-      -o-transform: translateY(-13px) rotate(45deg);
-      transform: translateY(-13px) rotate(45deg);
-   }
-}
-
-.drawer-menu {
+.return-to-top {
    position: fixed;
-   right: 0;
-   background-color: #111;
-   z-index: 5;
-   display: flex;
-   flex-direction: column;
-   width: 0vw;
-   padding-top: 110px;
-   line-height: 30px;
-   overflow-y: scroll;
-   .just-padding {
-      padding-left: 20px;
-      & > a {
-         text-transform: uppercase;
-         color: $light;
-         text-decoration: none;
-         font-size: 16px;
-      }
-   }
-   p {
-      color: $light;
-   }
-   .border-side {
-      display: flex;
-      flex-direction: column;
-      border-left: 1.5px solid $light;
-      margin-left: 10px;
-      padding-left: 10px;
-      a {
-         text-transform: uppercase;
-         color: $light;
-         text-decoration: none;
-         font-size: 13px;
-      }
-   }
-}
-.dropbtn {
-   font-size: 16px;
-   border: none;
-}
-
-.dropdown {
-   position: relative;
-   display: flex;
-   cursor: pointer;
-}
-#ep {
-   opacity: 0.5;
-}
-#arrowDown {
-   opacity: 0.5;
-}
-.dropdown-content {
-   top: 30px;
-   display: none;
-   position: absolute;
-   background-color: $dark;
-   min-width: 140px;
-   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-   z-index: 1;
-}
-
-.dropdown-content a {
-   color: $light;
-   padding: 8px 14px;
+   bottom: 75px;
+   right: 20px;
+   background: rgba($color: $dark, $alpha: 0.5);
+   width: 50px;
+   height: 50px;
    text-decoration: none;
-   display: block;
-}
-
-.homelight {
-   margin-top: 15%;
-   hr {
-      border: 0.1px solid $succese_light;
-   }
-}
-.homedark {
-   margin-bottom: 5%;
-   .hrDark {
-      width: 0;
-      border: 0.1px solid $Primary_dark;
-      margin-left: 0;
-   }
-}
-
-.moredropdown {
-   position: relative;
-   display: flex;
-}
-
-.moredropdown-content {
-   display: none;
-   position: absolute;
-   top: 30px;
-   background-color: black;
-   min-width: 190px;
-   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-   z-index: 1;
-}
-
-.moredropdown-content a {
-   color: $light;
-   padding: 12px 14px;
-   text-decoration: none;
-   display: block;
-   button {
-      border-radius: 2px;
-
-      border: 1px solid #d9534f;
-      background-color: #d9534f;
+   border-radius: 50%;
+   transition: all .3s ease;
+   z-index: 10001;
+   .back-top {
       color: $light;
-   }
-}
-hr {
-   border: 0.1px solid #6fb586;
-}
-
-@mixin hoverLines($bgColor, $width, $height, $margineTop) {
-   background-color: $bgColor;
-   width: $width;
-   height: $height;
-   margin-top: $margineTop;
-}
-.hoverLine {
-   @include hoverLines($succese_light, 0px, 1px, 8px);
-}
-
-.hoverLineRooms {
-   @include hoverLines($succese_light, 0px, 1px, 8px);
-}
-.hoverLineLocation {
-   @include hoverLines($succese_light, 0px, 1px, 8px);
-}
-.hoverLineAct {
-   @include hoverLines($succese_light, 0px, 1px, 8px);
-}
-.hoverLineRes {
-   @include hoverLines($succese_light, 0px, 1px, 8px);
-}
-.hoverLinespa {
-   @include hoverLines($succese_light, 0px, 1px, 8px);
-}
-.hoverLineContact {
-   @include hoverLines($succese_light, 0px, 1px, 8px);
-}
-.hoverLineShop {
-   @include hoverLines($succese_light, 150px, 1px, 8px);
-}
-.hoverLineGallery {
-   @include hoverLines($succese_light, 150px, 1px, 8px);
-}
-.hoverLineHotel {
-   @include hoverLines($succese_light, 150px, 1px, 8px);
-}
-.hoverLineOffer {
-   @include hoverLines($succese_light, 150px, 1px, 8px);
-}
-.hoverLineBlog {
-   @include hoverLines($succese_light, 150px, 1px, 8px);
-}
-.hoverLineAdmin {
-   @include hoverLines($succese_light, 150px, 1px, 8px);
-}
-.hoverLineAll {
-   @include hoverLines($succese_light, 150px, 1px, 8px);
-}
-
-@mixin imageslider($url) {
-   background-image: url($url);
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center;
-}
-.firstImg {
-   @include imageslider("pic/spa.jpg");
-   width: 100%;
-}
-.secondImg {
-   @include imageslider("pic/slider_n_1.jpg");
-   width: 100%;
-}
-.thirdImg {
-   @include imageslider("pic/slide_n_2_o.jpg ");
-   width: 100%;
-}
-.slider {
-   position: relative;
-   overflow: hidden;
-   margin: 0;
-   .slider-txt {
-      margin-top: 610px;
-   }
-   .t1,
-   .t2 {
-      color: $light;
-      font-family: "Playfair Display", serif;
-   }
-   .t1 {
-      font-size: 85px;
-      padding: 0 100px;
-      font-weight: 700;
-   }
-   .slider-btn {
-      text-transform: uppercase;
-      padding: 10px 30px;
-      color: $light;
-      background: rgba($color: $light, $alpha: 0);
-      border: 1px solid $light;
-   }
-   ul {
       margin: 0;
-      padding: 0;
-      display: inline-block;
-      list-style: none;
-      li {
-         // display: inline-block;
-         margin: 0;
-         float: left;
-         padding: 0;
-         width: 100vw;
-         height: 100vh;
-         text-align: center;
-         //line-height:300px;
-         color: #333;
+      position: relative;
+      left: 16px;
+      top: 8px;
+      font-size: 19px;
+      transition: all .3s ease;
+   }
+   &:hover{
+      .back-top{
+         top: 0;
       }
-   }
-   .control {
-      position: absolute;
-      top: 40%;
-      z-index: 0;
-      display: block;
-      padding: 15px 25px;
-      width: auto;
-      height: auto;
-      color: $light;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 18px;
-      opacity: 0.8;
-      cursor: pointer;
-      &:hover {
-         background-color: #2a2a2a;
-      }
-   }
-
-   .prev {
-      left: 0px;
-   }
-
-   .next {
-      right: 0px;
+      background: rgba($color: $dark, $alpha: 0.8);
    }
 }
 .mainTxt {
@@ -404,7 +80,7 @@ hr {
    }
    .Ornament-image img {
       width: 200px;
-
+      margin-top: 30px;
    }
 }
 .text {
@@ -439,7 +115,7 @@ hr {
    opacity: 0.1;
    margin-top: 5%;
    font-family: "Playfair Display", serif;
-   color: black;
+   color: $dark;
    opacity: 1;
    font-weight: 700;
    line-height: 1.1;
@@ -458,9 +134,7 @@ hr {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   width: 90%;
-   bottom: 5rem;
-   left: 4.5rem;
+   bottom: 3rem;
    background-color: $Primary_dark;
 
    .date-input {
@@ -570,17 +244,16 @@ hr {
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
-   height: 60vh;
    font-size: 50px;
    font-weight: 700;
 
    h4 {
-      line-height: 0.7;
       color: $smoky;
       opacity: 1;
       font-family: "Playfair Display", serif;
    }
    p {
+      padding: 10px;
       font-size: 18px;
       font-weight: 200;
       letter-spacing: 1px;
@@ -622,20 +295,19 @@ hr {
 }
 .Ornament {
    width: 150px;
-   height: 6vh;
+   height: 50px;
 }
 
 .parentOfDotsSlider {
-   background-color: #111118;
+   background-color: $primary_darker;
    width: 100%;
-   height: 80vh;
    display: flex;
    flex-direction: column;
 }
 .slideshow-container {
    margin-top: 20px;
    position: relative;
-   height: 80vh;
+
    width: 100%;
    .readMore {
       text-decoration: none;
@@ -663,13 +335,11 @@ hr {
    font-family: none;
    margin-right: 10%;
    h2 {
-
       margin-bottom: 0;
       a {
          text-decoration: none;
          color: $light;
          font-family: none;
-
          &:hover {
             color: $succese_light;
          }
@@ -682,13 +352,12 @@ hr {
 }
 .main-card {
    height: 50vh;
-   display: flex;
-   margin: 30px 10% 0 10%;
+
    background-color: $Primary_dark;
    border: 1px solid $Primary_dark;
    color: $light;
    .iconify {
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid $smoky;
       border-radius: 50%;
       padding: 7px;
    }
@@ -772,19 +441,12 @@ hr {
 .textImg {
    display: none;
 }
-.parentOfSecondSlider {
-   padding: 30px 200px;
-}
+
 
 .layoutImgTxt {
-   display: flex;
-   padding: 0 100px;
-   padding-bottom: 50px;
-   img {
-      border-radius: 50%;
-      height: 15vh;
-      margin: 30px 0;
-   }
+   // padding: 0 100px;
+   // padding-bottom: 50px;
+
    .textSlides {
       display: flex;
       flex-direction: column;
@@ -839,6 +501,8 @@ footer {
    }
    .footer-info {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       .footer-items {
          color: rgba($color: $light, $alpha: 0.7);
          font-size: $font-medium;
@@ -871,7 +535,6 @@ footer {
    }
 }
 .under-footer {
-   display: flex;
    background-color: $Primary_dark;
    justify-content: space-between;
    align-items: center;
@@ -881,9 +544,7 @@ footer {
       margin-left: 10px;
    }
    img {
-      margin: 10px 0;
       width: 130px;
-      margin-left: 90px;
    }
    ul {
       display: flex;
@@ -914,9 +575,7 @@ footer {
 //  }
 .modal-container {
    position: absolute;
-   top: 7rem;
-   left: 27rem;
-   max-width: 600px;
+   max-width: 500px;
    margin: auto;
    overflow-x: auto;
    z-index: 10;
@@ -947,7 +606,6 @@ table {
 
       th {
          background: $gray-200;
-         padding: 0.75rem 1.5rem;
          vertical-align: middle;
       }
    }
@@ -963,7 +621,7 @@ table {
       td {
          color: $gray-900;
          text-align: left;
-         padding: 1.5rem 1.5rem;
+        // padding: 1.5rem 1.5rem;
          vertical-align: middle;
          font-size: 1.125rem;
          font-weight: normal;

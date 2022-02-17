@@ -1,0 +1,177 @@
+@import "../colors";
+@mixin imageslider($url) {
+   background-image: url($url);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+.firstImg {
+   @include imageslider("pic/spa.jpg");
+   width: 100%;
+}
+.secondImg {
+   @include imageslider("pic/slider_n_1.jpg");
+   width: 100%;
+}
+.thirdImg {
+   @include imageslider("pic/slide_n_2_o.jpg ");
+   width: 100%;
+}
+.slider {
+   position: relative;
+   overflow: hidden;
+   margin: 0;
+   .slider-txt {
+      margin-top: 630px;
+   }
+   .t1,
+   .t2 {
+      color: $light;
+      font-family: "Playfair Display", serif;
+   }
+   
+   .slider-btn {
+      text-transform: uppercase;
+      padding: 10px 30px;
+      color: $light;
+      background: rgba($color: $light, $alpha: 0);
+      border: 1px solid $light;
+   }
+   ul {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      list-style: none;
+      li {
+         margin: 0;
+         float: left;
+         padding: 0;
+         width: 100vw;
+         height: 100vh;
+         text-align: center;
+         color: $smoky;
+      }
+   }
+   .control {
+      position: absolute;
+      top: 40%;
+      z-index: 0;
+      display: block;
+      width: auto;
+      height: auto;
+      opacity: 0.4;
+      cursor: pointer;
+      &:hover {
+         opacity: 0.9;
+      }
+   }
+
+   .prev {
+      left: 0px;
+   }
+
+   .next {
+      right: 0px;
+   }
+}
+.mainBtn{
+   cursor: pointer;
+   position: relative;
+   width: 160px;
+   box-sizing: border-box;
+   overflow: hidden;
+   height: 40px;
+   border: 1px solid $light;
+   background-color: transparent;
+   a {
+      font-size: 14px;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.5s ease;
+      z-index: 1;
+      color: white;
+      display: flex;
+      justify-content: center;
+      margin-right: 15%;
+      position: absolute;
+     
+   }
+   .hiddenPart {
+      width: 160px;
+      height: 40px;
+      bottom: -40px;
+      left: 0px;
+      background: $light;
+      position: absolute;
+      transition: all 0.5s ease;
+      z-index: 1;
+   }
+}
+
+.mainBtn2{
+   cursor: pointer;
+   position: relative;
+   width: 160px;
+   box-sizing: border-box;
+   overflow: hidden;
+   height: 40px;
+   border: 1px solid $light;
+   background-color: transparent;
+   a {
+      font-size: 14px;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.5s ease;
+      z-index: 1;
+      color: white;
+      display: flex;
+      justify-content: center;
+      margin-right: 15%;
+      position: absolute;
+     
+   }
+   .hiddenPart2 {
+      width: 160px;
+      height: 40px;
+      bottom: -40px;
+      left: 0px;
+      background: $light;
+      position: absolute;
+      transition: all 0.5s ease;
+      z-index: 1;
+   }
+}
+
+.mainBtn3{
+   cursor: pointer;
+   position: relative;
+   width: 160px;
+   box-sizing: border-box;
+   overflow: hidden;
+   height: 40px;
+   border: 1px solid $light;
+   background-color: transparent;
+   a {
+      font-size: 14px;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.5s ease;
+      z-index: 1;
+      color: white;
+      display: flex;
+      justify-content: center;
+      margin-right: 15%;
+      position: absolute;
+     
+   }
+   .hiddenPart3 {
+      width: 160px;
+      height: 40px;
+      bottom: -40px;
+      left: 0px;
+      background: $light;
+      position: absolute;
+      transition: all 0.5s ease;
+      z-index: 1;
+   }
+}

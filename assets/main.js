@@ -95,9 +95,7 @@ $(document).ready(function () {
                  
             }
          
-      })
-
-      
+      }) 
       $(".prev").on("click", function () {
          moveLeft();
          $('.UL-slider li').each(function(){

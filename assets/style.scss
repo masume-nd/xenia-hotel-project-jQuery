@@ -1,8 +1,11 @@
-@import "colors";
+@import "./colors";
 @import "variables";
 @import "mixin";
-@import "./navbar/navbar";
-@import "./slider1/slider1";
+@import "./navbar";
+@import "slider1";
+@import "slider2";
+@import "slider3";
+@import "footer";
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Sans+Pro:ital,wght@0,300;1,200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Source+Sans+Pro:ital,wght@0,300;1,200&display=swap");
 

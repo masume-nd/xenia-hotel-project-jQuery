@@ -1,4 +1,4 @@
-@import "../colors";
+@import "colors";
 @mixin imageslider($url) {
    background-image: url($url);
    background-repeat: no-repeat;
@@ -92,7 +92,7 @@
       color: white;
       display: flex;
       justify-content: center;
-      margin-right: 15%;
+      margin-right: 20%;
       position: absolute;
      
    }
@@ -126,7 +126,7 @@
       color: white;
       display: flex;
       justify-content: center;
-      margin-right: 15%;
+      margin-right: 17%;
       position: absolute;
      
    }
@@ -160,7 +160,7 @@
       color: white;
       display: flex;
       justify-content: center;
-      margin-right: 15%;
+      margin-right: 17%;
       position: absolute;
      
    }

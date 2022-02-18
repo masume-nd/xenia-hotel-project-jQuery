@@ -1,6 +1,7 @@
 $(document).ready(function () {
+   
    $('body').scroll(function(){
-      alert('hi')
+      alert("hi")
       $('.return-to-top').css({
          display:"block"
       })
@@ -537,7 +538,7 @@ $(document).ready(function () {
          transition: "all ease .5s",
       });
    });
-   $(".shop").hover(() => {
+   $(".shop").mouseenter(() => {
       $(".hoverLineShop").css({
          width: "150px",
          transition: "all ease .5s",
@@ -677,7 +678,7 @@ $(document).ready(function () {
             let arrivalDate = new Date(Room.from).getTime();
             let departureDate = new Date(Room.to).getTime();
                if(arrivalDate <= reqArrivalDate && departureDate >= reqDepartureDate && numBeds == Room.bed){
-                  Room.css({
+                  room.css({
                      backgroundColor: "yellow"
                   })
                   from.css({
@@ -690,9 +691,7 @@ $(document).ready(function () {
                      backgroundColor: "yellow"
                   })
                } 
-          })
-         
-          
+          }) 
          },
       })
    })

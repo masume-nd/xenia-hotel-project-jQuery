@@ -7,22 +7,16 @@ $(document).ready(function () {
       })
    })
    $(function () {
-    let slideCount = $(".slider ul li").length;
-    let slideWidth = $(".slider ul li").width();
-    let slideHeight = $(".slider ul li").height();
-    let slideUlWidth = slideCount * slideWidth;
-      
+      let slideCount = $(".slider ul li").length;
+      let slideWidth = $(".slider ul li").width();
+      let slideHeight = $(".slider ul li").height();
+      let slideUlWidth = slideCount * slideWidth;
+         
       $(".slider").css({ "max-width": slideWidth, height: slideHeight });
       $(".slider ul").css({ width: slideUlWidth, "margin-left": -slideWidth}); 
       $(".slider ul li:last-child").prependTo($(".slider ul"));
-
-      // console.log($(".slider ul li:last-child"));
-      // let currentLi = $(".slider ul:first-child");
-     // currentLi.toggleClass('active')
-
+   
       function moveLeft() {
-         // let currentLi = $(".slider ul:first-child");
-         // currentLi.toggleClass('active');
          $(".slider ul")
             .stop()
             .animate(
@@ -35,11 +29,13 @@ $(document).ready(function () {
                   $(".slider ul").css("left", "");
                }
             );
+            $('.slider-txt').css({
+               marginTop : "610px",
+            })
       }
-      //const intervalFun =  setInterval(moveRight,6000)
+      const intervalFun =  setInterval(moveRight,6000)
 
       function moveRight() {
-         
          $(".slider ul")
             .stop()
             .animate(
@@ -52,12 +48,15 @@ $(document).ready(function () {
                   $(".slider ul").css("left", "");
                }
             );
+            $('.slider-txt').css({
+               marginTop : "610px",
+            }) 
       }
 
-      // $('.slider-image').mouseenter(()=>{
-      //       clearInterval(intervalFun)
-      //    }
-      // )
+      $('.slider-image').mouseenter(()=>{
+            clearInterval(intervalFun)
+         }
+      )
    
 
 
@@ -75,13 +74,27 @@ $(document).ready(function () {
          moveRight();
          $('.UL-slider li').each(function(){
             $(this).addClass('active').siblings().removeClass('active');
-            if($(".UL-slider li").hasClass('active')){
-               console.log($("hello"));
+         });
+            if($(".firstImg").hasClass('active')){
                $('.slider-txt').animate({
                   marginTop : "200px",
-               },'slow')    
+               },'slow')
+               
             }
-         });
+            else if($(".secondImg").hasClass('active')){
+               $('.slider-txt').animate({
+                  marginTop : "200px",
+               },'slow') 
+                
+
+            }else if($(".thirdImg").hasClass('active')){
+               $('.slider-txt').css({
+                  marginTop : "200px",
+               }) 
+               $('.slider-txt').fadeToggle("slow"); 
+                 
+            }
+         
       })
 
       
@@ -89,30 +102,29 @@ $(document).ready(function () {
          moveLeft();
          $('.UL-slider li').each(function(){
             $(this).addClass('active').siblings().removeClass('active');
-            // console.log($(this).hasClass());
-            if($(".UL-slider li").hasClass('active')){
-               console.log($("hello"));
+         });  
+            if($(".firstImg").hasClass('active')){
                $('.slider-txt').animate({
                   marginTop : "200px",
-               },'slow')    
+               },'slow')
+               
             }
-         });
+            else if($(".secondImg").hasClass('active')){
+               $('.slider-txt').animate({
+                  marginTop : "200px",
+               },'slow') 
+                
+
+            }else if($(".thirdImg").hasClass('active')){
+               $('.slider-txt').css({
+                  marginTop : "200px",
+               }) 
+               $('.slider-txt').fadeIn(3000); 
+                 
+            }
+
+        
    })
-
-      // if($('.slider-image').hasClass('.active')){
-      //    alert('hello')
-
-         // $('.firstImg > .slider-txt').animate({
-         //       marginTop : "300px",
-         // },'slow')
-         
-         // $('.secondImg > .slider-txt').animate({
-         //    marginTop : "300px"
-         // },'slow')   
-
-         // $('.thirdImg > .slider-txt').animate({
-         //    marginTop : "300px"
-         // },'slow')
 
       $(".homedark").click(function () {
          $("body").css({

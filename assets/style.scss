@@ -14,6 +14,7 @@ body {
    font-size: 14px;
    position: relative;
    background-color: $light;
+   overflow: hidden;
 }
 * {
    font-family: "Source Sans Pro", sans-serif;
@@ -73,7 +74,8 @@ header {
    }
 
    .lastTxt {
-      font-family: "Source Sans Pro", sans-serif;      position: relative;
+      font-family: "Source Sans Pro", sans-serif;      
+      position: relative;
       bottom: 20px;
       font-size: 16px;
       font-weight: 300;
@@ -232,12 +234,10 @@ header {
       padding: 20px;
       color: rgba($color: $light, $alpha: 0.7);
       visibility: hidden;
-      //  opacity: 0;
       height: 0;
       transition: visibility, height 0.5s;
    }
 }
-// opacity 0.5s linear
 .Bg-bed {
    display: flex;
    flex-direction: column;
@@ -383,7 +383,6 @@ header {
    background-color: #bbb;
    border-radius: 50%;
    display: inline-block;
-   //   transition: background-color 0.6s ease;
 }
 
 .active,
@@ -397,7 +396,6 @@ header {
    -webkit-animation-duration: 1.5s;
    animation-name: fade;
    animation-duration: 1.5s;
-   //animation-fill-mode: forwards;
    animation-direction: alternate;
 }
 
@@ -447,8 +445,6 @@ header {
 
 
 .layoutImgTxt {
-   // padding: 0 100px;
-   // padding-bottom: 50px;
 
    .textSlides {
       display: flex;
@@ -563,19 +559,14 @@ footer {
       }
    }
 }
-// .close-modal {
-//    color: #aaa;
-//    font-size: larger;
-//    position: absolute;
-//    right: -45px;
-//    top: 5px;
-//    width: 70px;
-//    text-decoration: none;
-//    &:hover {
-//      color: black;
-//      cursor: pointer;
-//    }
-//  }
+.close-modal {
+   color: #aaa;
+   font-size: x-large;
+   &:hover {
+     color: black;
+     cursor: pointer;
+   }
+ }
 .modal-container {
    position: absolute;
    max-width: 500px;
@@ -602,13 +593,13 @@ table {
    }
    white-space: nowrap;
    thead tr {
-      color: $gray-800;
+      color: $gray-900;
       font-size: 1rem;
       font-weight: 500;
       text-align: left;
 
       th {
-         background: $gray-200;
+         background: $gray-700;
          vertical-align: middle;
       }
    }

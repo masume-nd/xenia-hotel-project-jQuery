@@ -1,330 +1,323 @@
 @import "colors";
 .navbar {
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    height: 15vh;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    background-color: rgba($color: $dark, $alpha: 0.4);
-    color: $light;
-    box-sizing: border-box;
- 
-    .first-logo {
-       width: 6rem;
-       position: relative;
-    }
-    #home{
-      margin-top: 10px;
-    }
-    .navbar-ul {
-       list-style: none;
-       align-items: center;
-    }
-    .button {
-       //
-       cursor: pointer;
-       position: relative;
-       padding: 10px 10px 0 15px;
-       margin-left: 25vw;
-       width: 300px;
-       height: 40px;
-       text-align: center;
-       box-sizing: border-box;
-       overflow: hidden;
-       color: $light;
-       background-color: $warning;
- 
-       a {
-          white-space: nowrap;
-          text-decoration: none;
-          transition: all 0.5s ease;
-          z-index: 1;
-          color: $light;
-          text-decoration: none;
-          position: relative;
-       }
-       .eff {
-          width: 300px;
-          height: 40px;
-          bottom: -50px;
-          left: 0;
-          background: $light;
-          position: absolute;
-          transition: all 0.5s ease;
-          z-index: 1;
-       }
-    }
-    //hamburger lines
-    .three {
-       margin-left: 2rem;
-       width: 23.8%;
-    }
-    .col {
-       display: flex;
-       float: left;
-       align-items: center;
-       margin: 1% 0 1% 3.6%;
-    }
-    .col:first-of-type {
-       margin-left: 2rem;
-    }
-    .hamburger {
-       margin-left: 1rem;
-    }
-    .line {
-       background-color: $light;
-       width: 20px;
-       height: 1px;
-       margin: 5px 0;
-       display: block;
-       transition: 0.5s;
-       transform-origin: left;
-    }
-    .hamburger:hover {
-       cursor: pointer;
-    }
-    #hamburger-1.is-active .line:nth-child(1) {
-        -webkit-transform: translateY(13px) rotate(-45deg);
-        -ms-transform: translateY(13px) rotate(-45deg);
-        -o-transform: translateY(13px) rotate(-45deg);
-        transform: translateY(13px) rotate(-45deg);
-     }
-     #hamburger-1.is-active .line:nth-child(2) {
-        opacity: 0;
-     }
-     #hamburger-1.is-active .line:nth-child(3) {
-        -webkit-transform: translateY(-13px) rotate(45deg);
-        -ms-transform: translateY(-13px) rotate(45deg);
-        -o-transform: translateY(-13px) rotate(45deg);
-        transform: translateY(-13px) rotate(45deg);
-     }
-  }
+   position: absolute;
+   z-index: 10;
+   width: 100%;
+   height: 15vh;
+   display: flex;
+   align-items: center;
+   text-transform: uppercase;
+   background-color: rgba($color: $dark, $alpha: 0.4);
+   color: map-get(map-get($palette, neutral), light);
+   box-sizing: border-box;
 
-  .dropbtn {
-    font-size: 16px;
-    border: none;
- }
- 
- .dropdown {
-    position: relative;
-    display: flex;
-    cursor: pointer;
- }
- #ep {
-    opacity: 0.5;
- }
- #arrowDown {
-    opacity: 0.5;
- }
- .dropdown-content {
-    top: 30px;
-    display: none;
-    position: absolute;
-    background-color: $dark;
-    min-width: 140px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
- }
- 
- .dropdown-content a {
-    color: $light;
-    padding: 8px 14px;
-    text-decoration: none;
-    display: block;
- }
- 
- .homelight {
-    margin-top: 15%;
-    hr {
-       border: 0.1px solid $succese_light;
-    }
- }
- .homedark {
-    margin-bottom: 5%;
-    .hrDark {
-       width: 0;
-       border: 0.1px solid $Primary_dark;
-       margin-left: 0;
-    }
- }
- 
- .moredropdown {
-    position: relative;
-    display: flex;
- }
- 
- .moredropdown-content {
-    display: none;
-    position: absolute;
-    top: 30px;
-    background-color: black;
-    min-width: 190px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
- }
- 
- .moredropdown-content a {
-    color: $light;
-    padding: 12px 14px;
-    text-decoration: none;
-    display: block;
-    button {
-       border-radius: 2px;
- 
-       border: 1px solid #d9534f;
-       background-color: #d9534f;
-       color: $light;
-    }
- }
- hr {
-    border: 0.1px solid #6fb586;
- }
- 
+   .first-logo {
+      width: 6rem;
+      position: relative;
+   }
+   .navbar-ul {
+      list-style: none;
+      align-items: center;
+   }
+   .button {
+      cursor: pointer;
+      position: relative;
+      padding: 10px 10px 0 15px;
+      width: 300px;
+      height: 40px;
+      text-align: center;
+      box-sizing: border-box;
+      overflow: hidden;
+      color: map-get(map-get($palette, neutral), light);
+      background-color: $warning;
 
- @mixin hoverLines($bgColor, $width, $height, $margineTop) {
-    background-color: $bgColor;
-    width: $width;
-    height: $height;
-    margin-top: $margineTop;
- }
- @mixin hoverLines($bgColor, $width, $height, $margineTop) {
-    background-color: $bgColor;
-    width: $width;
-    height: $height;
-    margin-top: $margineTop;
- }
- .hoverLine {
-    @include hoverLines($succese_light, 0px, 1px, 8px);
- }
- 
- .hoverLineRooms {
-    @include hoverLines($succese_light, 0px, 1px, 8px);
- }
- .hoverLineLocation {
-    @include hoverLines($succese_light, 0px, 1px, 8px);
- }
- .hoverLineAct {
-    @include hoverLines($succese_light, 0px, 1px, 8px);
- }
- .hoverLineRes {
-    @include hoverLines($succese_light, 0px, 1px, 8px);
- }
- .hoverLinespa {
-    @include hoverLines($succese_light, 0px, 1px, 8px);
- }
- .hoverLineContact {
-    @include hoverLines($succese_light, 0px, 1px, 8px);
- }
- .hoverLineShop {
-    @include hoverLines($succese_light, 150px, 1px, 8px);
- }
- .hoverLineGallery {
-    @include hoverLines($succese_light, 150px, 1px, 8px);
- }
- .hoverLineHotel {
-    @include hoverLines($succese_light, 150px, 1px, 8px);
- }
- .hoverLineOffer {
-    @include hoverLines($succese_light, 150px, 1px, 8px);
- }
- .hoverLineBlog {
-    @include hoverLines($succese_light, 150px, 1px, 8px);
- }
- .hoverLineAdmin {
-    @include hoverLines($succese_light, 150px, 1px, 8px);
- }
- .hoverLineAll {
-    @include hoverLines($succese_light, 150px, 1px, 8px);
- }
- 
- .hoverLineReserve{
-      @include hoverLines($succese_light, 150px, 1px, 8px);
- }
- 
- .hoverLineGrid{
-     @include hoverLines($succese_light, 150px, 1px, 2px);
- }
- .hoverLineLi{ 
-    @include hoverLines($succese_light, 150px, 1px, 2px);
- }
- .hoverLineMasonry{
-    @include hoverLines($succese_light, 150px, 1px, 2px);
- }
- .hoverLineTest{
-    @include hoverLines($succese_light, 150px, 1px, 2px);
- }
- .hoverLineShort{
-     @include hoverLines($succese_light, 150px, 1px, 2px);
- }
- .hoverLineSlider{
-     @include hoverLines($succese_light, 150px, 1px, 2px);
- }
- .hoverLineRService{
-     @include hoverLines($succese_light, 150px, 1px, 2px);
- }
- .hoverLineView{
-    @include hoverLines($succese_light, 150px, 1px, 2px);
- }
- .hoverLineSingle{
-     @include hoverLines($succese_light, 150px, 1px, 2px);
- }
- .hoverLineSingleView{
-      @include hoverLines($succese_light, 150px, 1px, 2px);
- }
- .hoverLinePost{
-      @include hoverLines($succese_light, 150px, 1px, 2px);
- }
- .hoverLineFull{
-   @include hoverLines($succese_light, 150px, 1px, 2px);
- }
- .hoverLineErr{
-  @include hoverLines($succese_light, 150px, 1px, 2px);
- }
- .hoverLineTheme{
-     @include hoverLines($succese_light, 150px, 1px, 2px);
- }
-
-
- .drawer-menu {
-    position: fixed;
-    right: 0;
-    background-color: $dark;
-    z-index: 5;
-    display: flex;
-    flex-direction: column;
-    width: 0vw;
-    padding-top: 110px;
-    line-height: 30px;
-    overflow-y: scroll;
-    .just-padding {
-       padding-left: 20px;
-       & > a {
-          text-transform: uppercase;
-          color: $light;
-          text-decoration: none;
-          font-size: 16px;
+      a {
+         white-space: nowrap;
+         text-decoration: none;
+         transition: all 0.5s ease;
+         z-index: 1;
+         color: map-get(map-get($palette, neutral), light);
+         text-decoration: none;
+         position: relative;
       }
-    }
-    .nav-open-menu{
-       display: none;
-    }
-    p {
-       color: $light;
-    }
-    .border-side {
-       display: flex;
-       flex-direction: column;
-       border-left: 1.5px solid $light;
-       margin-left: 10px;
-       padding-left: 10px;
-       a {
-          text-transform: uppercase;
-          color: $light;
-          text-decoration: none;
-          font-size: 13px;
-       }
-    }
- }
- 
+      .eff {
+         width: 300px;
+         height: 40px;
+         bottom: -50px;
+         left: 0;
+         background: map-get(map-get($palette, neutral), light);
+         position: absolute;
+         transition: all 0.5s ease;
+         z-index: 1;
+      }
+   }
+   //hamburger lines
+   .three {
+      margin-left: 2rem;
+      width: 23.8%;
+   }
+   .col {
+      display: flex;
+      float: left;
+      align-items: center;
+      margin: 1% 0 1% 3.6%;
+   }
+   .col:first-of-type {
+      margin-left: 2rem;
+   }
+   .hamburger {
+      margin-left: 1rem;
+   }
+   .line {
+      background-color: map-get(map-get($palette, neutral), light);
+      width: 20px;
+      height: 1px;
+      margin: 5px 0;
+      display: block;
+      transition: 0.5s;
+      transform-origin: left;
+   }
+   .hamburger:hover {
+      cursor: pointer;
+   }
+   #hamburger-1.is-active .line:nth-child(1) {
+      -webkit-transform: translateY(13px) rotate(-45deg);
+      -ms-transform: translateY(13px) rotate(-45deg);
+      -o-transform: translateY(13px) rotate(-45deg);
+      transform: translateY(13px) rotate(-45deg);
+   }
+   #hamburger-1.is-active .line:nth-child(2) {
+      opacity: 0;
+   }
+   #hamburger-1.is-active .line:nth-child(3) {
+      -webkit-transform: translateY(-13px) rotate(45deg);
+      -ms-transform: translateY(-13px) rotate(45deg);
+      -o-transform: translateY(-13px) rotate(45deg);
+      transform: translateY(-13px) rotate(45deg);
+   }
+}
+
+.dropbtn {
+   font-size: 16px;
+   border: none;
+}
+
+.dropdown {
+   top: 4px;
+   position: relative;
+   display: flex;
+   cursor: pointer;
+}
+#ep {
+   opacity: 0.5;
+}
+#arrowDown {
+   opacity: 0.5;
+}
+.dropdown-content {
+   top: 30px;
+   display: none;
+   position: absolute;
+   background-color: $dark;
+   min-width: 140px;
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+   z-index: 1;
+}
+
+.dropdown-content a {
+   color: map-get(map-get($palette, neutral), light);
+   padding: 8px 14px;
+   text-decoration: none;
+   display: block;
+}
+
+.homelight {
+   margin-top: 15%;
+   hr {
+      border: 0.1px solid map-get(map-get($palette, s_green), base);
+   }
+}
+.homedark {
+   margin-bottom: 5%;
+   .hrDark {
+      width: 0;
+      border: 0.1px solid $Primary_dark;
+      margin-left: 0;
+   }
+}
+
+.moredropdown {
+   position: relative;
+   display: flex;
+}
+
+.moredropdown-content {
+   display: none;
+   position: absolute;
+   top: 30px;
+   background-color: black;
+   min-width: 190px;
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+   z-index: 1;
+}
+
+.moredropdown-content a {
+   color: map-get(map-get($palette, neutral), light);
+   padding: 12px 14px;
+   text-decoration: none;
+   display: block;
+   button {
+      border-radius: 2px;
+
+      border: 1px solid #d9534f;
+      background-color: #d9534f;
+      color: map-get(map-get($palette, neutral), light);
+   }
+}
+hr {
+   border: 0.1px solid #6fb586;
+}
+
+@mixin hoverLines($bgColor, $width, $height, $margineTop) {
+   background-color: $bgColor;
+   width: $width;
+   height: $height;
+   margin-top: $margineTop;
+}
+@mixin hoverLines($bgColor, $width, $height, $margineTop) {
+   background-color: $bgColor;
+   width: $width;
+   height: $height;
+   margin-top: $margineTop;
+}
+.hoverLine {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 0px, 1px, 8px);
+}
+
+.hoverLineRooms {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 0px, 1px, 8px);
+}
+.hoverLineLocation {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 0px, 1px, 8px);
+}
+.hoverLineAct {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 0px, 1px, 8px);
+}
+.hoverLineRes {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 0px, 1px, 8px);
+}
+.hoverLinespa {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 0px, 1px, 8px);
+}
+.hoverLineContact {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 0px, 1px, 8px);
+}
+.hoverLineShop {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 8px);
+}
+.hoverLineGallery {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 8px);
+}
+.hoverLineHotel {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 8px);
+}
+.hoverLineOffer {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 8px);
+}
+.hoverLineBlog {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 8px);
+}
+.hoverLineAdmin {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 8px);
+}
+.hoverLineAll {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 8px);
+}
+
+.hoverLineReserve {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 8px);
+}
+
+.hoverLineGrid {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 2px);
+}
+.hoverLineLi {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 2px);
+}
+.hoverLineMasonry {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 2px);
+}
+.hoverLineTest {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 2px);
+}
+.hoverLineShort {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 2px);
+}
+.hoverLineSlider {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 2px);
+}
+.hoverLineRService {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 2px);
+}
+.hoverLineView {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 2px);
+}
+.hoverLineSingle {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 2px);
+}
+.hoverLineSingleView {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 2px);
+}
+.hoverLinePost {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 2px);
+}
+.hoverLineFull {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 2px);
+}
+.hoverLineErr {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 2px);
+}
+.hoverLineTheme {
+   @include hoverLines(map-get(map-get($palette, s_green), base), 150px, 1px, 2px);
+}
+
+.drawer-menu {
+   position: fixed;
+   right: 0;
+   background-color: $dark;
+   z-index: 5;
+   display: flex;
+   flex-direction: column;
+   width: 0vw;
+   padding-top: 110px;
+   line-height: 30px;
+   overflow-y: scroll;
+   .just-padding {
+      padding-left: 20px;
+      & > a {
+         text-transform: uppercase;
+         color: map-get(map-get($palette, neutral), light);
+         text-decoration: none;
+         font-size: 16px;
+      }
+   }
+   .nav-open-menu {
+      display: none;
+   }
+   p {
+      color: map-get(map-get($palette, neutral), light);
+   }
+   .border-side {
+      display: flex;
+      flex-direction: column;
+      border-left: 1.5px solid map-get(map-get($palette, neutral), light);
+      margin-left: 10px;
+      padding-left: 10px;
+      a {
+         text-transform: uppercase;
+         color: map-get(map-get($palette, neutral), light);
+         text-decoration: none;
+         font-size: 13px;
+      }
+   }
+}

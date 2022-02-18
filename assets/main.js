@@ -538,7 +538,7 @@ $(document).ready(function () {
          transition: "all ease .5s",
       });
    });
-   $(".shop").mouseenter(() => {
+   $(".shop").hover(() => {
       $(".hoverLineShop").css({
          width: "150px",
          transition: "all ease .5s",
@@ -663,7 +663,6 @@ $(document).ready(function () {
          method: "GET",
          url: "assets/rooms.json",
          success: (rooms) => {
-           
             rooms.map(Room => {
             let tr = $('<tr></tr>');  
             let from = $('<td></td>').text(Room.from);
@@ -696,6 +695,10 @@ $(document).ready(function () {
       })
    })
 });
+$(".close-modal").click(function(){
+   $(".modal-container").empty()
+   location.reload();
+})
 let slideIndex = 1;
 let interval_slides = setInterval(showSlides,1000)
 showSlides(slideIndex);

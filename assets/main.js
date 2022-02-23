@@ -201,7 +201,6 @@ $(document).ready(function () {
          },
          "slow"
       );
-
       $(".three").animate(
          {
             marginRight: "15vw",
@@ -293,7 +292,7 @@ $(document).ready(function () {
          transition: "all ease 2s",
       });
    });
-   $(".reserve").hover(() => {
+   $(".reserve").mouseenter(() => {
       $(".hoverLineReserve").css({
         width: "150px",
         transition: "all ease .5s",
@@ -662,6 +661,7 @@ $(document).ready(function () {
          });
       }
    );
+   
    $('#arrival-date').datepicker();
    $('#departure-date').datepicker();
 
